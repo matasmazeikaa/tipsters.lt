@@ -1,55 +1,90 @@
 import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
+import tailwind from '@astrojs/tailwind';
+
+// https://astro.build/config
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    NetlifyCMS({
-      config: {
-        // Use Netlify’s “Git Gateway” authentication and target our default branch
-        backend: {
-          name: 'git-gateway',
-          branch: 'latest',
-        },
-        // Configure where our media assets are stored & served from
-        media_folder: 'public/assets/blog',
-        public_folder: '/assets/blog',
-        // Configure the content collections
-        collections: [
-          {
-            name: 'posts',
-            label: 'Blog Posts',
-            label_singular: 'Blog Post',
-            folder: 'src/pages/posts',
-            create: true,
-            delete: true,
-            fields: [
-              { name: 'title', widget: 'string', label: 'Post Title' },
-              {
-                name: 'publishDate',
-                widget: 'datetime',
-                format: 'DD MMM YYYY',
-                date_format: 'DD MMM YYYY',
-                time_format: false,
-                label: 'Publish Date',
-              },
-              { name: 'author', widget: 'string', label: 'Author Name', required: false },
-              { name: 'authorURL', widget: 'string', label: 'Author URL', required: false },
-              { name: 'description', widget: 'string', label: 'Description', required: false },
-              { name: 'body', widget: 'markdown', label: 'Post Body' },
-              {
-                name: 'layout',
-                widget: 'select',
-                default: '../../layouts/BlogPost.astro',
-                options: [
-                  { label: 'Blog Post', value: '../../layouts/BlogPost.astro' },
-                ],
-              },
-            ],
-          },
-        ],
+  integrations: [tailwind(), NetlifyCMS({
+    config: {
+      // Use Netlify’s “Git Gateway” authentication and target our default branch
+      backend: {
+        name: 'git-gateway',
+        branch: 'latest'
       },
-      previewStyles: ['/src/styles/blog.css'],
-    }),
-  ],
+      // Configure where our media assets are stored & served from
+      media_folder: 'public/assets/media',
+      public_folder: '/assets/media',
+      // Configure the content collections
+      collections: [{
+        name: 'posts',
+        label: 'Pagrindinis puslapis',
+        folder: 'src/pages/posts',
+        fields: [{
+          name: 'title',
+          widget: 'string',
+          label: 'Hero sekcijos titulas'
+        }, {
+          name: 'subtitle',
+          widget: 'string',
+          label: 'Hero sekcijos subtitulas',
+        },
+
+        {
+          name: 'paslauga1Title',
+          widget: 'string',
+          label: 'Paslauga 1 titulas',
+        },
+        {
+          name: 'paslauga2Title',
+          widget: 'string',
+          label: 'Paslauga 2 titulas',
+        },
+        {
+          name: 'paslauga3Title',
+          widget: 'string',
+          label: 'Paslauga 3 titulas',
+        },
+        {
+          name: 'paslauga1Info',
+          widget: 'string',
+          label: 'Paslauga 1 info',
+        },
+        {
+          name: 'paslauga2Info',
+          widget: 'string',
+          label: 'Paslauga 2 info',
+        },
+        {
+          name: 'paslauga3Info',
+          widget: 'string',
+          label: 'Paslauga 3 info',
+        },
+        
+        {
+          name: 'atsiliepimai',
+          widget: 'list',
+          label: 'Atsiliepimu foto',
+          media_folder: 'public/assets/media',
+          fields: [{
+            name: 'atsiliepimaiFoto',
+            widget: 'image',
+            label: 'Atsiliepimu foto',
+            allow_multiple: true,
+            required: true,
+          }]
+        }, {
+          name: 'layout',
+          widget: 'select',
+          default: '../../layouts/BlogPost.astro',
+          options: [{
+            label: 'Blog Post',
+            value: '../../layouts/BlogPost.astro'
+          }]
+        }]
+      }]
+    },
+    previewStyles: ['/src/styles/global.css']
+  })]
 });

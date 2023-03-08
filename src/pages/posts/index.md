@@ -1,34 +1,40 @@
 ---
-title: Using Netlify CMS with an Astro site
-publishDate: 16 May 2022
-author: Chris Swithinbank
 authorURL: https://twitter.com/swithinbank
-description: How to get started using Netlify CMS to manage your Astro site’s content
+title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
+paslauga1Title: Pilnai išanalizuoti statymai
+paslauga2Title: Klaidingos lažybų bendrovių linijos
+paslauga3Title: Pagalba klientams 24/7
+paslauga1Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+  nibh tristique ipsum.
+paslauga2Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+  nibh tristique ipsum.
+paslauga3Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
+  nibh tristique ipsum.
 layout: ../../layouts/BlogPost.astro
+author: Chris Swithinbank
+subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
+  pagrindinę informacija rasite mūsų Telegram kanale.
+description: How to get started using Netlify CMS to manage your Astro site’s content
+publishDate: 16 May 2022
+atsiliepimai:
+  - atsiliepimaiFoto: /assets/media/image00002.jpeg
+  - atsiliepimaiFoto: /assets/media/image00003.jpeg
+  - atsiliepimaiFoto: /assets/media/image00005.jpeg
+  - atsiliepimaiFoto: /assets/media/image00045.jpeg
+  - atsiliepimaiFoto: /assets/media/image00007.jpeg
+  - atsiliepimaiFoto: /assets/media/image00005.jpeg
+  - atsiliepimaiFoto: /assets/media/image00008.jpeg
+  - atsiliepimaiFoto: /assets/media/image00009.jpeg
+  - atsiliepimaiFoto: /assets/media/image00010.jpeg
+  - atsiliepimaiFoto: /assets/media/image00011.jpeg
+  - atsiliepimaiFoto: /assets/media/image00012.jpeg
+  - atsiliepimaiFoto: /assets/media/image00013.jpeg
+  - atsiliepimaiFoto: /assets/media/image00014.jpeg
+  - atsiliepimaiFoto: /assets/media/image00015.jpeg
+  - atsiliepimaiFoto: /assets/media/image00016.jpeg
+  - atsiliepimaiFoto: /assets/media/image00017.jpeg
+  - atsiliepimaiFoto: /assets/media/image00018.jpeg
+  - atsiliepimaiFoto: /assets/media/image00019.jpeg
+  - atsiliepimaiFoto: /assets/media/image00021.jpeg
+  - atsiliepimaiFoto: /assets/media/image00022.jpeg
 ---
-![Astro + Netlify CMS logos](/assets/blog/header.png)
-
-[Netlify CMS](https://www.netlifycms.org/) is an open-source, Git-based content management system. It provides a single-page app for editing content and can publish that content by committing it to a hosted Git repo (for example on GitHub or GitLab).
-
-Adding Netlify CMS to an [Astro](https://astro.build/) site would usually involve creating a number of files in different parts of your project directory and then keeping all those moving parts in sync. With the [`astro-netlify-cms`](https://github.com/delucis/astro-netlify-cms/) integration, you configure the integration in your `astro.config.mjs` file and the integration takes care of the rest.
-
-```javascript
-import { defineConfig } from 'astro/config';
-import NetlifyCMS from 'astro-netlify-cms';
-
-export default defineConfig({
-  integrations: [
-    NetlifyCMS({
-      config: {
-        backend: {
-          name: 'git-gateway',
-          branch: 'main',
-        },
-        collections: [
-          // Content collections
-        ],
-      },
-    }),
-  ],
-});
-```

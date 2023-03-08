@@ -1,0 +1,41 @@
+---
+import Button from "./Button.astro";
+
+export interface Props {
+  time: any;
+  price: any;
+  isMostPopular: boolean;
+}
+
+const { price, time, isMostPopular } = Astro.props;
+---
+
+<style>
+  .line {
+    color: #eee;
+  }
+</style>
+
+<div class="p-32">
+  <p class="text-large mb-8">{time}</p>
+  <h2 class="text-h2">{price}</h2>
+  <p>VIP narystė</p>
+  <div class="line mb-24 h-[0.5px]"></div>
+  <div class="mb-16">
+    <img src="/assets/checkmark.png" class="mr-16" />
+    <p class="text-medium">Pilnai išanalizuoti statymai</p>
+  </div>
+  <div class="mb-16">
+    <img src="/assets/checkmark.png" class="mr-16" />
+    <p class="text-medium">Pilnai išanalizuoti statymai</p>
+  </div>
+  <div class="mb-24">
+    <img src="/assets/checkmark.png" class="mr-16" />
+    <p class="text-medium">Pilnai išanalizuoti statymai</p>
+  </div>
+  <p class="text-medium mb-64">
+    Tai puiki galimybė norintiems įsitikinti mūsų statymų kokybe pačioje
+    pradžioje.
+  </p>
+  <Button text="Pirkti" />
+</div>

@@ -1,0 +1,43 @@
+---
+export interface Props {
+  text?: string;
+  classList?: any;
+  isEmpty?: any;
+  href?: any;
+  salDelay?: any;
+}
+
+const { text, classList, isEmpty, href, salDelay } = Astro.props;
+---
+
+<style>
+  .button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 2.8rem;
+    gap: 12px;
+    background-color: var(--red-100);
+    border-radius: 1rem;
+    font-family: "Quicksand";
+    font-size: 1.8rem;
+    transition: 0.2s ease-in-out;
+  }
+
+  .button:hover {
+    opacity: 0.75;
+  }
+
+  .button-empty {
+    background-color: transparent;
+    border: 1px solid var(--white);
+  }
+</style>
+
+<a
+  href={href}
+  data-sal-delay={salDelay}
+  data-sal="slide-up"
+  class:list={[classList, "button", { "button-empty": isEmpty }]}>{text}</a
+>

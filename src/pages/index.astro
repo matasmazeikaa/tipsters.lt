@@ -1,86 +1,391 @@
 ---
 // Component Imports
-import BaseHead from '../components/BaseHead.astro';
-import BlogHeader from '../components/BlogHeader.astro';
-import BlogPostPreview from '../components/BlogPostPreview.astro';
-import { SITE } from '../config';
+import "@fontsource/quicksand";
+import "@fontsource/montserrat";
+// Default theme
+import "@splidejs/splide/css";
+import "/node_modules/sal.js/dist/sal.css";
 
-// Component Script:
-// You can write any JavaScript/TypeScript that you'd like here.
-// It will run during the build, but never in the browser.
-// All variables are available to use in the HTML template below.
-let { title } = SITE;
-let description = 'The perfect starter for your perfect blog.';
-let permalink = 'https://example.com/';
+// or other themes
+import "@splidejs/splide/css/skyblue";
+import "@splidejs/splide/css/sea-green";
 
-// Data Fetching: List all Markdown posts in the repo.
+// or only core styles
+import "@splidejs/splide/css/core";
+import BaseHead from "../components/BaseHead.astro";
+import Button from "../components/Button.astro";
+import PriceCard from "../components/PriceCard.astro";
 
-let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+const siteData = await Astro.glob("./posts/index.md");
+
+const {
+  title,
+  subtitle,
+  paslauga1Title,
+  paslauga2Title,
+  paslauga3Title,
+  paslauga1Info,
+  paslauga2Info,
+  paslauga3Info,
+  atsiliepimai,
+} = siteData[0].frontmatter;
+
+console.log(siteData[0].frontmatter);
+
+const currentYear = new Date().getFullYear();
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
 
+<script>
+  import Splide from "@splidejs/splide";
+  import sal from "sal.js";
+
+  new Splide(".splide", {
+    perPage: 3,
+    lazyLoad: "nearby",
+    type: "loop",
+    interval: 5000,
+    autoplay: true,
+    breakpoints: {
+      768: {
+        perPage: 1,
+        height: "auto",
+        width: "60%",
+      },
+    },
+  }).mount();
+
+  sal({
+    threshold: 0.2,
+    once: true,
+    root: null,
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+
+      document.querySelector("#checkbox").checked = false;
+    });
+  });
+</script>
+
 <html lang="en">
-	<head>
-		<BaseHead {title} {description} {permalink} />
+  <head>
+    <BaseHead />
+  </head>
 
-		<style>
-			header {
-				width: 100%;
-				height: 100%;
-				background-color: var(--theme-bg-offset);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+  <body>
+    <main>
+      <header class="fixed top-0 left-0 right-0 z-20">
+        <div
+          class="flex nav-container items-center relative justify-between py-40 container"
+        >
+          <img
+            src="/assets/media/tipsters-logo.svg"
+            class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
+            data-sal="slide-up"
+            data-sal-delay="100"
+          />
 
-			.content {
-				margin-top: 4rem;
-				margin-bottom: 8rem;
-			}
+          <nav
+            data-sal="slide-up"
+            data-sal-delay="100"
+            class="lg:flex gap-64 hidden lg:visible"
+          >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="100"
+              class="text-medium"
+              href="#paslaugos">Paslaugos</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="200"
+              class="text-medium"
+              href="#narystes">Narystės</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="300"
+              class="text-medium"
+              href="#atsiliepimai">Atsiliepimai</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="400"
+              class="text-medium"
+              href="#statistika">Statistika</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="500"
+              class="text-medium"
+              href="#kontaktai">Kontaktai</a
+            >
+          </nav>
 
-			.content :global(main > * + *) {
-				margin-top: 1rem;
-			}
+          <input
+            class="checkbox right-0"
+            type="checkbox"
+            name=""
+            id="checkbox"
+          />
+          <div class="hamburger-lines relative">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
 
-			.intro {
-				padding-bottom: 4rem;
-				margin-bottom: 2rem;
-				border-bottom: 4px solid var(--theme-divider);
-			}
+          <div class="menu-items">
+            <div class="flex flex-col gap-64">
+              <a class="text-nav-mobile" href="#paslaugos">Paslaugos</a>
+              <a class="text-nav-mobile" href="#narystes">Narystės</a>
+              <a class="text-nav-mobile" href="#atsiliepimai">Atsiliepimai</a>
+              <a class="text-nav-mobile" href="#statistika">Statistika</a>
+              <a class="text-nav-mobile" href="#kontaktai">Kontaktai</a>
+            </div>
+            <div class="flex mb-32 mt-auto items-center justify-center">
+              <a href="https://t.me/TipstersLt" target="_blank">
+                <img class="mr-48" src="/assets/media/telegram-icon.svg" />
+              </a>
+              <a href="https://www.instagram.com/tipsters.lt/" target="_blank">
+                <img src="/assets/media/instagram-icon.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+    <div class="hero h-screen relative">
+      <div
+        class="container mx-auto hero-content text-center h-full z-10 relative flex flex-col justify-center items-center"
+      >
+        <h1
+          data-sal="slide-up"
+          data-sal-delay="100"
+          class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
+        >
+          {title}
+        </h1>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="max-w-[65.6rem] mb-40 text-medium"
+        >
+          {subtitle}
+        </p>
+        <Button salDelay={"300"} href="#narystes" text="Įsigyti narystę" />
+      </div>
+      <div class="hero-scroll">
+        <img
+          class="mouse-animation"
+          src="/assets/media/mouse.png"
+          class="w-[3.2rem]"
+        />
+      </div>
+    </div>
+    <div id="paslaugos" class="mx-auto container pt-24 md:pt-96 md:pb-72 pb-56">
+      <h2
+        class="text-center text-h2 md:h2 mb-48 md:mb-80"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        Paslaugos
+      </h2>
+      <div class="flex flex-wrap justify-center gap-48 md:gap-64">
+        <div class="text-center max-w-[35.2rem] md:w-1/3">
+          <img
+            class="w-[4rem] mb-16 ml-auto mr-auto"
+            src="/assets/media/analyses-icon.svg"
+            data-sal="slide-up"
+            data-sal-delay="200"
+          />
+          <h3
+            data-sal="slide-up"
+            data-sal-delay="200"
+            class="text-h3 mb-16"
+            class="text-h3"
+          >
+            {paslauga1Title}
+          </h3>
+          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+            {paslauga1Info}
+          </p>
+        </div>
+        <div class="text-center max-w-[35.2rem] md:w-1/3">
+          <img
+            class="w-[4rem] mb-16 ml-auto mr-auto"
+            src="/assets/media/money-icon.svg"
+            data-sal="slide-up"
+            data-sal-delay="200"
+          />
+          <h3
+            data-sal="slide-up"
+            data-sal-delay="200"
+            class="text-h3 mb-16"
+            class="text-h3"
+          >
+            {paslauga2Title}
+          </h3>
+          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+            {paslauga2Info}
+          </p>
+        </div>
+        <div class="text-center max-w-[35.2rem] md:w-1/3">
+          <img
+            class="w-[4rem] mb-16 ml-auto mr-auto"
+            src="/assets/media/info-icon.svg"
+            data-sal="slide-up"
+            data-sal-delay="200"
+          />
+          <h3
+            class="text-h3 mb-16"
+            data-sal="slide-up"
+            data-sal-delay="200"
+            class="text-h3"
+          >
+            {paslauga3Title}
+          </h3>
+          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+            {paslauga3Info}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="narystes" class="container mx-auto md:96 md:pb-80 py-56">
+      <h2
+        class="text-center text-h2 mb-48 md:mb-100"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        Narystės
+      </h2>
+      <div class="pricing-grid">
+        <PriceCard time="2 Savaitės" price="69.99€" />
+        <PriceCard isMostPopular={true} time="3 Mėnesiai" price="249.99€" />
+        <PriceCard time="1 Mėnesis" price="119.99€" />
+      </div>
+    </div>
 
-			.intro > * {
-				margin: 0;
-			}
+    <div class="container mx-auto md:py-96" id="atsiliepimai">
+      <div
+        class="mb-48 md:mb-80 text-h2 text-center md:mb80"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        Atsiliepimai
+      </div>
 
-			.latest {
-				font-size: 2.5rem;
-				font-weight: 700;
-			}
-
-			footer {
-				text-align: center;
-			}
-		</style>
-	</head>
-
-	<body>
-		<BlogHeader />
-		<div class="wrapper">
-			<main class="content">
-				<section class="intro">
-					<h1 class="latest">{title}</h1>
-					<p>{description}</p>
-				</section>
-				<section aria-label="Blog post list">
-					{allPosts.map((p) => <BlogPostPreview post={p} />)}
-				</section>
-			</main>
-			<footer>
-			<a href="/admin">Admin Dashboard 🔐</a>
-			</footer>
-		</div>
-	</body>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="splide mx-auto"
+        role="group"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            {
+              atsiliepimai.map((atsiliepimas) => (
+                <li class="flex items-center splide__slide">
+                  <img
+                    class=" mx-auto"
+                    data-splide-lazy={atsiliepimas.atsiliepimaiFoto}
+                  />
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="statistika" class="container mx-auto md:py-96 py-56">
+      <div
+        class="text-h2 text-center md:mb80"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        Statistika
+      </div>
+    </div>
+    <div class="container md:py-96 text-center mx-auto">
+      <img
+        src="/assets/media/tipsters-logo.svg"
+        class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
+      />
+      <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Tipsters.It komanda - krepšinio bei teniso ekspertai, kurie yra
+          sukaupę 8 metų patirtį būtent šioje lažybų srityje.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Viskas oficialu ir paremta tikra statistika, kuri nuolat bus pildoma.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Pagalba visais klausimais 24/7.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Kviečiame jungtis prie mūsų komandos ir išbandyti tikrų profesionalų
+          darbą!
+        </p>
+      </div>
+      <div
+        class="lg:w-full w-max mx-auto lg:flex-row flex-col items-start gap-32 flex lg:flex flex-wrap justify-around"
+        id="kontaktai"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        <a
+          href="https://t.me/TipstersLt"
+          target="_blank"
+          class="flex items-center"
+        >
+          <img class="mr-12" src="/assets/media/telegram-icon.svg" />
+          <span class="text-medium-large">Telegram grupė</span>
+        </a>
+        <div class="flex items-center">
+          <img class="mr-12" src="/assets/media/livechat-icon.svg" />
+          <span class="text-medium-large">Live chat</span>
+        </div>
+        <div class="flex items-center">
+          <img class="mr-12" src="/assets/media/email-icon.svg" />
+          <span class="text-medium-large">pagalba@tipsters.lt</span>
+        </div>
+        <a
+          href="https://www.instagram.com/tipsters.lt/"
+          target="_blank"
+          class="flex items-center"
+        >
+          <img class="mr-12" src="/assets/media/instagram-icon.svg" />
+          <span class="text-medium-large">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="container mx-auto text-center text-[1.2rem] py-[1.2rem]">
+      © {currentYear} Tipsters.lt. Visos teisės saugomos.
+    </div>
+  </body>
 </html>
