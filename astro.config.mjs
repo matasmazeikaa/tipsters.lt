@@ -63,6 +63,20 @@ export default defineConfig({
         },
         
         {
+          name: 'statistika',
+          widget: 'list',
+          label: 'Statistikos foto',
+          media_folder: 'public/assets/media',
+          fields: [{
+            name: 'statistikosFoto',
+            widget: 'image',
+            label: 'Statistikos foto',
+            allow_multiple: true,
+            required: true,
+          }]
+        },
+
+        {
           name: 'atsiliepimai',
           widget: 'list',
           label: 'Atsiliepimu foto',

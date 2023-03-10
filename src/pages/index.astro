@@ -6,10 +6,6 @@ import "@fontsource/montserrat";
 import "@splidejs/splide/css";
 import "/node_modules/sal.js/dist/sal.css";
 
-// or other themes
-import "@splidejs/splide/css/skyblue";
-import "@splidejs/splide/css/sea-green";
-
 // or only core styles
 import "@splidejs/splide/css/core";
 import BaseHead from "../components/BaseHead.astro";
@@ -28,9 +24,8 @@ const {
   paslauga2Info,
   paslauga3Info,
   atsiliepimai,
+  statistika,
 } = siteData[0].frontmatter;
-
-console.log(siteData[0].frontmatter);
 
 const currentYear = new Date().getFullYear();
 
@@ -42,20 +37,20 @@ const currentYear = new Date().getFullYear();
   import Splide from "@splidejs/splide";
   import sal from "sal.js";
 
-  new Splide(".splide", {
-    perPage: 3,
-    lazyLoad: "nearby",
-    type: "loop",
-    interval: 5000,
-    autoplay: true,
-    breakpoints: {
-      768: {
-        perPage: 1,
-        height: "auto",
-        width: "60%",
+  document.querySelectorAll(".splide").forEach((carousel: any, index) =>
+    new Splide(carousel, {
+      perPage: index === 0 ? 3 : 1,
+      lazyLoad: "nearby",
+      type: "loop",
+      interval: 5000,
+      autoplay: true,
+      breakpoints: {
+        768: {
+          perPage: 1,
+        },
       },
-    },
-  }).mount();
+    }).mount()
+  );
 
   sal({
     threshold: 0.2,
@@ -307,12 +302,34 @@ const currentYear = new Date().getFullYear();
       </div>
     </div>
     <div id="statistika" class="container mx-auto md:py-96 py-56">
-      <div
+      <h2
         class="text-h2 text-center md:mb80"
         data-sal="slide-up"
         data-sal-delay="200"
       >
         Statistika
+      </h2>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="splide mx-auto"
+        role="group"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            {
+              statistika.map((statistika) => (
+                <li class="flex items-center splide__slide">
+                  <img
+                    class=" mx-auto"
+                    data-splide-lazy={statistika.statistikosFoto}
+                  />
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </div>
     <div class="container md:py-96 py-56 text-center mx-auto">

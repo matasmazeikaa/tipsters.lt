@@ -1,6 +1,8 @@
 ---
 authorURL: https://twitter.com/swithinbank
 title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
+subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
+  pagrindinę informacija rasite mūsų Telegram kanale.
 paslauga1Title: Pilnai išanalizuoti statymai
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga3Title: Pagalba klientams 24/7
@@ -10,11 +12,11 @@ paslauga2Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
 paslauga3Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
-subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
-  pagrindinę informacija rasite mūsų Telegram kanale.
+statistika:
+  - statistikosFoto: /assets/media/statistika3.jpeg
+  - statistikosFoto: /assets/media/statistika2.jpeg
+  - statistikosFoto: /assets/media/statistika1.jpeg
 atsiliepimai:
-  - atsiliepimaiFoto: /assets/media/image00002.jpeg
-  - atsiliepimaiFoto: /assets/media/image00003.jpeg
   - atsiliepimaiFoto: /assets/media/image00005.jpeg
   - atsiliepimaiFoto: /assets/media/image00045.jpeg
   - atsiliepimaiFoto: /assets/media/image00007.jpeg
