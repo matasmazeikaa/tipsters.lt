@@ -85,6 +85,7 @@ const currentYear = new Date().getFullYear();
           <img
             src="/assets/media/tipsters-logo.svg"
             class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
+            alt="tipsters"
             data-sal="slide-up"
             data-sal-delay="100"
           />
@@ -126,6 +127,7 @@ const currentYear = new Date().getFullYear();
             >
           </nav>
 
+          <label for="checkbox"></label>
           <input
             class="checkbox right-0"
             type="checkbox"
@@ -148,10 +150,17 @@ const currentYear = new Date().getFullYear();
             </div>
             <div class="flex mb-32 mt-auto items-center justify-center">
               <a href="https://t.me/TipstersLt" target="_blank">
-                <img class="mr-48" src="/assets/media/telegram-icon.svg" />
+                <img
+                  class="mr-48"
+                  alt="telegram-icon"
+                  src="/assets/media/telegram-icon.svg"
+                />
               </a>
               <a href="https://www.instagram.com/tipsters.lt/" target="_blank">
-                <img src="/assets/media/instagram-icon.svg" />
+                <img
+                  src="/assets/media/instagram-icon.svg"
+                  alt="instagram-icon"
+                />
               </a>
             </div>
           </div>
@@ -181,7 +190,8 @@ const currentYear = new Date().getFullYear();
       <div class="hero-scroll">
         <img
           class="mouse-animation"
-          src="/assets/media/mouse.png"
+          src="/assets/media/mouse.svg"
+          alt="mouse"
           class="w-[3.2rem]"
         />
       </div>
@@ -199,6 +209,7 @@ const currentYear = new Date().getFullYear();
           <img
             class="w-[4rem] mb-16 ml-auto mr-auto"
             src="/assets/media/analyses-icon.svg"
+            alt="analyses-icon"
             data-sal="slide-up"
             data-sal-delay="200"
           />
@@ -218,6 +229,7 @@ const currentYear = new Date().getFullYear();
           <img
             class="w-[4rem] mb-16 ml-auto mr-auto"
             src="/assets/media/money-icon.svg"
+            alt="money-icon"
             data-sal="slide-up"
             data-sal-delay="200"
           />
@@ -237,6 +249,7 @@ const currentYear = new Date().getFullYear();
           <img
             class="w-[4rem] mb-16 ml-auto mr-auto"
             src="/assets/media/info-icon.svg"
+            alt="info-icon"
             data-sal="slide-up"
             data-sal-delay="200"
           />
@@ -288,10 +301,11 @@ const currentYear = new Date().getFullYear();
         <div class="splide__track">
           <ul class="splide__list">
             {
-              atsiliepimai.map((atsiliepimas) => (
+              atsiliepimai.map((atsiliepimas, index) => (
                 <li class="flex items-center splide__slide">
                   <img
-                    class=" mx-auto"
+                    class="mx-auto"
+                    alt={`atsiliepimas-${index + 1}`}
                     data-splide-lazy={atsiliepimas.atsiliepimaiFoto}
                   />
                 </li>
@@ -319,10 +333,11 @@ const currentYear = new Date().getFullYear();
         <div class="splide__track">
           <ul class="splide__list">
             {
-              statistika.map((statistika) => (
+              statistika.map((statistika, index) => (
                 <li class="flex items-center splide__slide">
                   <img
                     class=" mx-auto"
+                    alt={`statistika-${index + 1}`}
                     data-splide-lazy={statistika.statistikosFoto}
                   />
                 </li>
@@ -335,6 +350,7 @@ const currentYear = new Date().getFullYear();
     <div class="container md:py-96 py-56 text-center mx-auto">
       <img
         src="/assets/media/tipsters-logo.svg"
+        alt="tipsters-logo"
         class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
       />
       <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
@@ -380,15 +396,24 @@ const currentYear = new Date().getFullYear();
           target="_blank"
           class="flex items-center"
         >
-          <img class="mr-12" src="/assets/media/telegram-icon.svg" />
+          <img
+            class="mr-12"
+            src="/assets/media/telegram-icon.svg"
+            alt="telegram-icon"
+          />
           <span class="text-medium-large">Telegram grupė</span>
         </a>
         <div class="flex items-center">
-          <img class="mr-12" src="/assets/media/livechat-icon.svg" />
+          <img
+            alt="livechat-icon"
+            class="mr-12"
+            src="/assets/media/livechat-icon.svg"
+          />
           <span class="text-medium-large">Live chat</span>
         </div>
         <div class="flex items-center">
-          <img class="mr-12" src="/assets/media/email-icon.svg" />
+          <im alt="email-icon" class="mr-12" src="/assets/media/email-icon.svg"
+          ></im>
           <span class="text-medium-large">pagalba@tipsters.lt</span>
         </div>
         <a
@@ -396,7 +421,11 @@ const currentYear = new Date().getFullYear();
           target="_blank"
           class="flex items-center"
         >
-          <img class="mr-12" src="/assets/media/instagram-icon.svg" />
+          <img
+            alt="instagram-icon"
+            class="mr-12"
+            src="/assets/media/instagram-icon.svg"
+          />
           <span class="text-medium-large">Instagram</span>
         </a>
       </div>

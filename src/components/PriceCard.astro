@@ -49,15 +49,19 @@ const { price, time, isMostPopular, subtext } = Astro.props;
     <p class="text-medium">VIP narystė</p>
     <div class="line mb-24 h-[0.5px]"></div>
     <div class="flex items-center mb-16">
-      <img src="/assets/media/checkmark.png" class="inline mr-16" />
+      <img
+        src="/assets/media/checkmark.png"
+        alt="checkmark"
+        class="inline mr-16"
+      />
       <p class="text-medium">Pilnai išanalizuoti statymai</p>
     </div>
     <div class="flex items-center mb-16">
-      <img src="/assets/media/checkmark.png" class="mr-16" />
+      <img src="/assets/media/checkmark.png" alt="checkmark" class="mr-16" />
       <p class="text-medium">Klaidingos lažybų bendrovių linijos</p>
     </div>
     <div class="flex items-center mb-24">
-      <img src="/assets/media/checkmark.png" class="mr-16" />
+      <img src="/assets/media/checkmark.png" alt="checkmark" class="mr-16" />
       <p class="text-medium">Pagalba klientams 24/7</p>
     </div>
     <p class="text-medium mb-64">
@@ -66,6 +70,7 @@ const { price, time, isMostPopular, subtext } = Astro.props;
     <Button
       classList="w-full"
       isEmpty={!isMostPopular}
+      href="https://t.me/TipstersLt"
       text="Įsigyti narystę"
     />
   </div>
