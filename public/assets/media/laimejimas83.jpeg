@@ -1,0 +1,26 @@
+const path = require('path');
+const fs = require('fs').promises;
+
+const renameFiles = async (folderPath) => {
+    try {
+        const files = await fs.readdir(folderPath);
+		let i = 0;
+
+        for (const file of files) {
+            const fileInfo = path.parse(file);
+
+            const oldPath = path.join(__dirname, folderPath, file);
+            const newPath = path.join(__dirname, folderPath, `laimejimas${i}.jpeg`);
+
+			console.log(`laimejimas${i}.jpeg` + '\n')
+
+            await fs.rename(oldPath, newPath);
+			i++;
+        }
+    } catch (error) {
+        // Handle error here
+        console.log(error);
+    }
+};
+
+renameFiles('./');
