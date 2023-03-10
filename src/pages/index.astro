@@ -36,6 +36,11 @@ const currentYear = new Date().getFullYear();
 <script>
   import Splide from "@splidejs/splide";
   import sal from "sal.js";
+  import {
+    disableBodyScroll,
+    enableBodyScroll,
+    clearAllBodyScrollLocks,
+  } from "body-scroll-lock";
 
   document.querySelectorAll(".splide").forEach((carousel: any, index) =>
     new Splide(carousel, {
@@ -67,8 +72,20 @@ const currentYear = new Date().getFullYear();
       });
 
       document.querySelector("#checkbox").checked = false;
+      clearAllBodyScrollLocks();
     });
   });
+
+  document
+    .querySelectorAll("#checkbox")[0]
+    .addEventListener("change", function () {
+      console.log(this.checked);
+      if (this.checked) {
+        disableBodyScroll(document.querySelector("body"));
+      } else {
+        clearAllBodyScrollLocks();
+      }
+    });
 
   setTimeout(function () {
     let S = document.createElement("script");
