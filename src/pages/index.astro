@@ -74,6 +74,19 @@ const currentYear = new Date().getFullYear();
       document.querySelector("#checkbox").checked = false;
     });
   });
+
+  setTimeout(function () {
+    let S = document.createElement("script");
+    S.type = "text/javascript";
+
+    S.src = "https://code.tidio.co/8qndyl9q0e2bzlwizig77fqlv8y8uw7j.js";
+
+    try {
+      document.getElementsByTagName("HEAD")[0].appendChild(S);
+    } catch (e) {
+      alert(e);
+    }
+  }, 3000);
 </script>
 
 <html lang="en">
