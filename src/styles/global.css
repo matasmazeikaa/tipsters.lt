@@ -88,12 +88,6 @@ a {
   animation-iteration-count: infinite;
 }
 
-.hero {
-  background: url(/assets/media/hero-background.png) no-repeat center center
-    fixed;
-  background-size: cover;
-}
-
 header {
   background: rgba(0, 0, 0, 0.5);
 }

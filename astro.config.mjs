@@ -93,5 +93,5 @@ export default defineConfig({
   }), astroImageTools, compress({
     img: false,
     svg: false
-  }), purgecss()]
+  })]
 });
