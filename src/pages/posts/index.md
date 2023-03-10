@@ -118,7 +118,4 @@ winnings:
   - winningFoto: /assets/media/laimejimas79.jpeg
   - winningFoto: /assets/media/laimejimas80.jpeg
   - winningFoto: /assets/media/laimejimas81.jpeg
-  - winningFoto: /assets/media/laimejimas82.jpeg
-  - winningFoto: /assets/media/laimejimas83.jpeg
-  - winningFoto: /assets/media/laimejimas84.jpeg
 ---
