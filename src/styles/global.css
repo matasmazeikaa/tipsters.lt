@@ -93,8 +93,8 @@ header {
 }
 
 .hero {
-  background: url(/assets/media/hero-background.webp) no-repeat center center
-    fixed;
+  background: url(/assets/media/hero-background.webp);
+  background-position: center center;
   background-size: cover;
 }
 
