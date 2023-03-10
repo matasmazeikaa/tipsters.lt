@@ -23,7 +23,7 @@ module.exports = {
 				"large": ['2.4rem', {
 					fontFamily: 'Quicksand'
 				}],
-				"nav-mobile": ['3.2rem', {
+				"nav-mobile": ['2.8rem', {
 					fontFamily: 'Quicksand',
 					fontWeight: '700'
 				}],
