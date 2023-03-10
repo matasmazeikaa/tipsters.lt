@@ -10,7 +10,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^2.1.0",
+    "astro": "^2.0.0",
     "mime": "^3.0.0"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "astro-compress": "^1.1.35",
     "astro-imagetools": "^0.8.1",
     "astro-netlify-cms": "^0.5.2",
+    "astro-purgecss": "^2.0.1",
     "sal.js": "^0.8.5",
     "sharp": "^0.31.3",
     "slick-carousel": "^1.8.1",

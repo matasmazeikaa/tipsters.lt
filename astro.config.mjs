@@ -2,13 +2,14 @@ import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
 import tailwind from '@astrojs/tailwind';
 
-
-// https://astro.build/config
 import image from "@astrojs/image";
 import { astroImageTools } from "astro-imagetools";
 
 // https://astro.build/config
 import compress from "astro-compress";
+
+// https://astro.build/config
+import purgecss from "astro-purgecss";
 
 // https://astro.build/config
 export default defineConfig({
@@ -92,5 +93,5 @@ export default defineConfig({
   }), astroImageTools, compress({
     img: false,
     svg: false
-  })]
+  }), purgecss()]
 });
