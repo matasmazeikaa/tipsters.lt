@@ -11,7 +11,11 @@ import "@splidejs/splide/css/core";
 import BaseHead from "../components/BaseHead.astro";
 import Button from "../components/Button.astro";
 import PriceCard from "../components/PriceCard.astro";
-import { Image, Picture } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
+import {
+  BackgroundImage,
+  ImageSupportDetection,
+} from "astro-imagetools/components";
 
 const siteData = await Astro.glob("./posts/index.md");
 
@@ -75,6 +79,7 @@ const currentYear = new Date().getFullYear();
 <html lang="en">
   <head>
     <BaseHead />
+    <ImageSupportDetection />
   </head>
 
   <body>
@@ -168,9 +173,25 @@ const currentYear = new Date().getFullYear();
         </div>
       </header>
     </main>
-    <div class="hero h-screen relative">
+    <BackgroundImage
+      attributes={{
+        link: {
+          fetchpriority: "high",
+        },
+      }}
+      format={["jpeg", "webp"]}
+      formatOptions={{
+        jpeg: {
+          quality: 85,
+        },
+        webp: {
+          quality: 85,
+        },
+      }}
+      src="/assets/media/hero-background.png"
+    >
       <div
-        class="container mx-auto hero-content text-center h-full z-10 relative flex flex-col justify-center items-center"
+        class="container h-screen mx-auto hero-content text-center h-full z-10 relative flex flex-col justify-center items-center"
       >
         <h1
           data-sal="slide-up"
@@ -196,7 +217,7 @@ const currentYear = new Date().getFullYear();
           class="w-[3.2rem]"
         />
       </div>
-    </div>
+    </BackgroundImage>
     <div id="paslaugos" class="mx-auto container pt-24 md:pt-96 md:pb-72 pb-56">
       <h2
         class="text-center text-h2 md:h2 mb-48 md:mb-80"
