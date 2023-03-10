@@ -89,5 +89,8 @@ export default defineConfig({
     previewStyles: ['/src/styles/global.css']
   }), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-  }), astroImageTools, compress()]
+  }), astroImageTools, compress({
+    img: false,
+    svg: false
+  })]
 });
