@@ -11,6 +11,7 @@ import "@splidejs/splide/css/core";
 import BaseHead from "../components/BaseHead.astro";
 import Button from "../components/Button.astro";
 import PriceCard from "../components/PriceCard.astro";
+import { Image, Picture } from "@astrojs/image/components";
 
 const siteData = await Astro.glob("./posts/index.md");
 
@@ -303,10 +304,14 @@ const currentYear = new Date().getFullYear();
             {
               atsiliepimai.map((atsiliepimas, index) => (
                 <li class="flex items-center splide__slide">
-                  <img
+                  <Picture
+                    src={atsiliepimas.atsiliepimaiFoto}
                     class="mx-auto"
+                    widths={[400, 800, 1200]}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    fit="contain"
+                    aspectRatio="1:1"
                     alt={`atsiliepimas-${index + 1}`}
-                    data-splide-lazy={atsiliepimas.atsiliepimaiFoto}
                   />
                 </li>
               ))
@@ -335,10 +340,14 @@ const currentYear = new Date().getFullYear();
             {
               statistika.map((statistika, index) => (
                 <li class="flex items-center splide__slide">
-                  <img
-                    class=" mx-auto"
+                  <Picture
+                    src={statistika.statistikosFoto}
+                    class="mx-auto"
+                    widths={[400, 800, 1200]}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    fit="contain"
+                    aspectRatio="1:1"
                     alt={`statistika-${index + 1}`}
-                    data-splide-lazy={statistika.statistikosFoto}
                   />
                 </li>
               ))

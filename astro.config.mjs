@@ -5,6 +5,9 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 
 // https://astro.build/config
+import image from "@astrojs/image";
+
+// https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), NetlifyCMS({
     config: {
@@ -28,41 +31,32 @@ export default defineConfig({
         }, {
           name: 'subtitle',
           widget: 'string',
-          label: 'Hero sekcijos subtitulas',
-        },
-
-        {
+          label: 'Hero sekcijos subtitulas'
+        }, {
           name: 'paslauga1Title',
           widget: 'string',
-          label: 'Paslauga 1 titulas',
-        },
-        {
+          label: 'Paslauga 1 titulas'
+        }, {
           name: 'paslauga2Title',
           widget: 'string',
-          label: 'Paslauga 2 titulas',
-        },
-        {
+          label: 'Paslauga 2 titulas'
+        }, {
           name: 'paslauga3Title',
           widget: 'string',
-          label: 'Paslauga 3 titulas',
-        },
-        {
+          label: 'Paslauga 3 titulas'
+        }, {
           name: 'paslauga1Info',
           widget: 'string',
-          label: 'Paslauga 1 info',
-        },
-        {
+          label: 'Paslauga 1 info'
+        }, {
           name: 'paslauga2Info',
           widget: 'string',
-          label: 'Paslauga 2 info',
-        },
-        {
+          label: 'Paslauga 2 info'
+        }, {
           name: 'paslauga3Info',
           widget: 'string',
-          label: 'Paslauga 3 info',
-        },
-        
-        {
+          label: 'Paslauga 3 info'
+        }, {
           name: 'statistika',
           widget: 'list',
           label: 'Statistikos foto',
@@ -72,11 +66,9 @@ export default defineConfig({
             widget: 'image',
             label: 'Statistikos foto',
             allow_multiple: true,
-            required: true,
+            required: true
           }]
-        },
-
-        {
+        }, {
           name: 'atsiliepimai',
           widget: 'list',
           label: 'Atsiliepimu foto',
@@ -86,11 +78,14 @@ export default defineConfig({
             widget: 'image',
             label: 'Atsiliepimu foto',
             allow_multiple: true,
-            required: true,
+            required: true
           }]
         }]
       }]
     },
     previewStyles: ['/src/styles/global.css']
+  }), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+
   })]
 });
