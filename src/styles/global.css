@@ -98,6 +98,14 @@ header {
   background-size: cover;
 }
 
+@media screen and (max-width: 640px) {
+  .hero {
+    background: url(/assets/media/hero-background-mobile-min.jpg);
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
 .hero-scroll {
   background: linear-gradient(0, #000000 0%, rgba(0, 0, 0, 0) 100%);
   position: absolute;
