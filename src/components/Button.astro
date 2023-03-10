@@ -39,5 +39,6 @@ const { text, classList, isEmpty, href, salDelay } = Astro.props;
   href={href}
   data-sal-delay={salDelay}
   data-sal="slide-up"
+  target="_blank"
   class:list={[classList, "button", { "button-empty": isEmpty }]}>{text}</a
 >
