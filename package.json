@@ -10,7 +10,8 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^2.1.0"
+    "astro": "^2.1.0",
+    "mime": "^3.0.0"
   },
   "dependencies": {
     "@astrojs/image": "^0.16.0",
