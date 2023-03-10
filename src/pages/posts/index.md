@@ -10,12 +10,8 @@ paslauga2Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
 paslauga3Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
-layout: ../../layouts/BlogPost.astro
-author: Chris Swithinbank
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
-description: How to get started using Netlify CMS to manage your Astro site’s content
-publishDate: 16 May 2022
 atsiliepimai:
   - atsiliepimaiFoto: /assets/media/image00002.jpeg
   - atsiliepimaiFoto: /assets/media/image00003.jpeg

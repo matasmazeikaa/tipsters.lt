@@ -1,47 +1,89 @@
 ---
 import "../styles/global.css";
 
-export interface Props {
-  title: string;
-  description: string;
-  permalink: string;
-}
-const { title, description, permalink } = Astro.props;
+const title = "Tipsters";
+const description = "Didžiausia lažybų ekspertų grupė Lietuvoje";
+const url = "https://tipsters.lt";
+const author = "Tipsters.lt";
 ---
 
-<!-- Global Metadata -->
+{/* Recommended Meta Tags */}
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width" />
-<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="language" content="Lithuanian" />
+<meta http-equiv="content-type" content="text/html" />
+<meta name="author" content={author} />
+<meta name="designer" content={author} />
+<meta name="publisher" content={author} />
 
-<!-- Primary Meta Tags -->
+{/* Search Engine Optimization Meta Tags */}
 <title>{title}</title>
-<meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta
+  name="keywords"
+  content="Lazybu Ekspertai,Lazybos,Statymai,Isanalizuoti statymai"
+/>
+<meta name="robots" content="index,follow" />
+<meta name="distribution" content="web" />
+{
+  /* 
+      Facebook Open Graph meta tags
+        documentation: https://developers.facebook.com/docs/sharing/opengraph */
+}
+<meta name="og:title" content={title} />
+<meta name="og:type" content="site" />
+<meta name="og:url" content={url} />
+<meta name="og:image" content={"/assets/media/share.png"} />
+<meta name="og:site_name" content={title} />
+<meta name="og:description" content={description} />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={permalink} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content="https://astro.build/social.png?v=1" />
+<link rel="apple-touch-icon" href="/assets/media/apple-touch-icon.png" />
+<link
+  rel="apple-touch-icon"
+  sizes="16x16"
+  href="/assets/media/favicon-16x16.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="32x32"
+  href="/assets/media/favicon-32x32.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/assets/media/apple-touch-icon.png"
+/>
+<link rel="manifest" href="/manifest.json" />
+<link
+  rel="mask-icon"
+  color="#000000"
+  href="/assets/media/safari-pinned-tab.svg"
+/>
+<link rel="apple-touch-startup-image" href="/startup.png" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={permalink} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://astro.build/social.png?v=1" />
+{/* Meta Tags for HTML pages on Mobile */}
+{
+  /* <meta name="format-detection" content="telephone=yes"/>
+        <meta name="HandheldFriendly" content="true"/>  */
+}
+<meta
+  name="viewport"
+  content="width=device-width, minimum-scale=1, initial-scale=1.0"
+/>
+<meta name="theme-color" content="#000" />
+<link rel="shortcut icon" href="/assets/media/favicon.ico" />
+
+{
+  /* 
+      Twitter Summary card
+        documentation: https://dev.twitter.com/cards/getting-started
+        Be sure validate your Twitter card markup on the documentation site. */
+}
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@onirenaud" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Quicksand:wght@400&display=swap"
-/>
-
-<!-- Required Core Stylesheet -->
-<link
-  rel="stylesheet"
-  href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
 />

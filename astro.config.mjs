@@ -74,14 +74,6 @@ export default defineConfig({
             allow_multiple: true,
             required: true,
           }]
-        }, {
-          name: 'layout',
-          widget: 'select',
-          default: '../../layouts/BlogPost.astro',
-          options: [{
-            label: 'Blog Post',
-            value: '../../layouts/BlogPost.astro'
-          }]
         }]
       }]
     },
