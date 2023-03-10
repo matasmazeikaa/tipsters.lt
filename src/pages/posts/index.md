@@ -12,6 +12,9 @@ paslauga2Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
 paslauga3Info: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat
   nibh tristique ipsum.
+price2Weeks: 69.99€
+price3Months: 249.99€
+price1Month: 119.99€
 statistika:
   - statistikosFoto: /assets/media/statistika3.jpeg
   - statistikosFoto: /assets/media/statistika2.jpeg

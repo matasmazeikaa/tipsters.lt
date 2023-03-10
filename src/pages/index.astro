@@ -20,6 +20,9 @@ const {
   paslauga1Info,
   paslauga2Info,
   paslauga3Info,
+  price2Weeks,
+  price3Months,
+  price1Month,
   atsiliepimai,
   statistika,
 } = siteData[0].frontmatter;
@@ -300,9 +303,13 @@ const currentYear = new Date().getFullYear();
         Narystės
       </h2>
       <div class="pricing-grid">
-        <PriceCard time="2 Savaitės" price="69.99€" />
-        <PriceCard isMostPopular={true} time="3 Mėnesiai" price="249.99€" />
-        <PriceCard time="1 Mėnesis" price="119.99€" />
+        <PriceCard time="2 Savaitės" price={price2Weeks} />
+        <PriceCard
+          isMostPopular={true}
+          time="3 Mėnesiai"
+          price={price3Months}
+        />
+        <PriceCard time="1 Mėnesis" price={price1Month} />
       </div>
     </div>
 
