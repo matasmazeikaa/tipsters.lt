@@ -19,6 +19,7 @@
     "@fontsource/montserrat": "^4.5.14",
     "@fontsource/quicksand": "^4.5.12",
     "@splidejs/splide": "^4.1.4",
+    "astro-compress": "^1.1.35",
     "astro-imagetools": "^0.8.1",
     "astro-netlify-cms": "^0.5.2",
     "sal.js": "^0.8.5",

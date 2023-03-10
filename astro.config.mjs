@@ -2,12 +2,13 @@ import { defineConfig } from 'astro/config';
 import NetlifyCMS from 'astro-netlify-cms';
 import tailwind from '@astrojs/tailwind';
 
-// https://astro.build/config
 
 // https://astro.build/config
 import image from "@astrojs/image";
 import { astroImageTools } from "astro-imagetools";
 
+// https://astro.build/config
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -88,6 +89,5 @@ export default defineConfig({
     previewStyles: ['/src/styles/global.css']
   }), image({
     serviceEntryPoint: '@astrojs/image/sharp'
-
-  }), astroImageTools]
+  }), astroImageTools, compress()]
 });

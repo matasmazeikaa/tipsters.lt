@@ -148,11 +148,11 @@ const currentYear = new Date().getFullYear();
             >
           </nav>
 
-          <label for="checkbox" class="absolute hidden">Mobile menu</label>
           <input
             class="checkbox right-0"
             type="checkbox"
-            name=""
+            name="Mobile menu"
+            aria-label="Mobile menu"
             id="checkbox"
           />
           <div class="hamburger-lines relative">
@@ -198,11 +198,8 @@ const currentYear = new Date().getFullYear();
           fetchpriority: "high",
         },
       }}
-      format={["jpeg", "webp"]}
+      format={["webp"]}
       formatOptions={{
-        jpeg: {
-          quality: 85,
-        },
         webp: {
           quality: 85,
         },
