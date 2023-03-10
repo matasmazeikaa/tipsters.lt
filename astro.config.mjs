@@ -9,7 +9,6 @@ import { astroImageTools } from "astro-imagetools";
 import compress from "astro-compress";
 
 // https://astro.build/config
-import purgecss from "astro-purgecss";
 
 // https://astro.build/config
 export default defineConfig({
