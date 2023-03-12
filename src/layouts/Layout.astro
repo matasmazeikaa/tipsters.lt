@@ -1,0 +1,222 @@
+---
+import "@splidejs/splide/css";
+import "/node_modules/sal.js/dist/sal.css";
+
+import "@splidejs/splide/css/core";
+import BaseHead from "../components/BaseHead.astro";
+const currentYear = new Date().getFullYear();
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<script>
+  import sal from "sal.js";
+  import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
+
+  sal({
+    threshold: 0.2,
+    once: true,
+    root: null,
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+
+      document.querySelector("#checkbox").checked = false;
+      clearAllBodyScrollLocks();
+    });
+  });
+
+  document
+    .querySelectorAll("#checkbox")[0]
+    .addEventListener("change", function () {
+      console.log(this.checked);
+      if (this.checked) {
+        disableBodyScroll(document.querySelector("body"));
+      } else {
+        clearAllBodyScrollLocks();
+      }
+    });
+
+  setTimeout(function () {
+    let S = document.createElement("script");
+    S.type = "text/javascript";
+
+    S.src = "https://code.tidio.co/8qndyl9q0e2bzlwizig77fqlv8y8uw7j.js";
+
+    try {
+      document.getElementsByTagName("HEAD")[0].appendChild(S);
+    } catch (e) {
+      alert(e);
+    }
+  }, 3000);
+</script>
+
+<html lang="en">
+  <head>
+    <BaseHead />
+  </head>
+
+  <body>
+    <main>
+      <header class="fixed top-0 left-0 right-0 z-20">
+        <div
+          class="flex nav-container items-center relative justify-between py-40 container"
+        >
+          <img
+            src="/assets/media/tipsters-logo.svg"
+            class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
+            alt="tipsters"
+            data-sal="slide-up"
+            data-sal-delay="100"
+            width="245"
+            height="20"
+          />
+
+          <nav
+            data-sal="slide-up"
+            data-sal-delay="100"
+            class="lg:flex gap-64 hidden lg:visible"
+          >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="100"
+              class="text-medium"
+              href="/#paslaugos">Paslaugos</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="200"
+              class="text-medium"
+              href="/#narystes">Narystės</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="300"
+              class="text-medium"
+              href="/#atsiliepimai">Atsiliepimai</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="400"
+              class="text-medium"
+              href="/#statistika">Statistika</a
+            >
+            <a
+              data-sal="slide-up"
+              data-sal-delay="500"
+              class="text-medium"
+              href="/#kontaktai">Kontaktai</a
+            >
+          </nav>
+
+          <input
+            class="checkbox right-0"
+            type="checkbox"
+            name="Mobile menu"
+            aria-label="Mobile menu"
+            id="checkbox"
+          />
+          <div class="hamburger-lines relative">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+
+          <div class="menu-items">
+            <div class="flex flex-col gap-64">
+              <a class="text-nav-mobile" href="/#paslaugos">Paslaugos</a>
+              <a class="text-nav-mobile" href="/#narystes">Narystės</a>
+              <a class="text-nav-mobile" href="/#atsiliepimai">Atsiliepimai</a>
+              <a class="text-nav-mobile" href="/#statistika">Statistika</a>
+              <a class="text-nav-mobile" href="/#kontaktai">Kontaktai</a>
+            </div>
+            <div class="flex mt-32 items-center justify-center">
+              <a href="https://t.me/TipstersLt" class="p-24" target="_blank">
+                <img
+                  width="32"
+                  height="32"
+                  alt="telegram-icon"
+                  src="/assets/media/telegram-icon.svg"
+                />
+              </a>
+              <a
+                class="p-24"
+                href="https://www.instagram.com/tipsters.lt/"
+                target="_blank"
+              >
+                <img
+                  width="32"
+                  height="32"
+                  src="/assets/media/instagram-icon.svg"
+                  alt="instagram-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </main>
+    <slot />
+    <div
+      class="lg:w-full w-max mx-auto lg:flex-row flex-col items-start gap-32 flex lg:flex flex-wrap justify-around"
+      id="kontaktai"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      <a
+        href="https://t.me/TipstersLt"
+        target="_blank"
+        class="flex items-center"
+      >
+        <img
+          class="mr-12"
+          src="/assets/media/telegram-icon.svg"
+          width="32"
+          height="32"
+          alt="telegram-icon"
+        />
+        <span class="text-medium-large">Telegram grupė</span>
+      </a>
+      <!-- <div class="flex items-center">
+          <img alt="email-icon" class="mr-12" src="/assets/media/email-icon.svg"
+          ></img>
+          <span class="text-medium-large">pagalba@tipsters.lt</span>
+        </div> -->
+      <a
+        href="https://www.instagram.com/tipsters.lt/"
+        target="_blank"
+        class="flex items-center"
+      >
+        <img
+          alt="instagram-icon"
+          class="mr-12"
+          width="32"
+          height="32"
+          src="/assets/media/instagram-icon.svg"
+        />
+        <span class="text-medium-large">Instagram</span>
+      </a>
+    </div>
+
+    <div class="container mx-auto text-center py-[1.2rem]">
+      <div class="gap-16 flex flex-wrap items-center justify-between">
+        <p class="text-[1.2rem]">
+          © {currentYear} Tipsters.lt. Visos teisės saugomos.
+        </p>
+        <a href="/pirkimo-pardavimo-taisykles" class="text-[1.2rem]"
+          >Pirkimo pardavimo taisykles</a
+        >
+        <a href="/privatumo-politika" class="text-[1.2rem]"
+          >Privatumo poilitika</a
+        >
+      </div>
+    </div>
+  </body>
+</html>

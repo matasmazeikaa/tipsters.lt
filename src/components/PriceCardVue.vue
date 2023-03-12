@@ -1,30 +1,6 @@
----
-import Button from "./Button.astro";
-
-export interface Props {
-  time?: any;
-  subtext?: any;
-  price?: any;
-  isMostPopular?: boolean;
-}
-
-const { price, time, isMostPopular, subtext } = Astro.props;
----
-
-<style>
-  .line {
-    color: #eee;
-  }
-
-  .border-gray {
-    border: 1px solid #eee;
-  }
-</style>
-
-<script></script>
-
-<div
-  class:list={[
+<template>
+	<div
+  class="{[
     "border-gray-100 border rounded-[4rem]",
     {
       "p-32 h-fit mt-auto": !isMostPopular,
@@ -34,13 +10,13 @@ const { price, time, isMostPopular, subtext } = Astro.props;
   data-sal="slide-up"
   data-sal-delay="200"
 >
-  {
+  {{
     isMostPopular && (
       <p class="bg-red-100 rounded-t-[4rem] uppercase text-[1.8rem] py-16 text-center border-b-[1px] border-gray-100">
         Populiariausias
       </p>
     )
-  }
+  }}
   <div
     class:list={{
       "pt-16 px-32 pb-32": isMostPopular,
@@ -86,8 +62,31 @@ const { price, time, isMostPopular, subtext } = Astro.props;
     <Button
       id={price}
       classList="w-full"
-      isEmpty={!isMostPopular}
+      isEmpty="!isMostPopular"
       text="Įsigyti narystę"
     />
   </div>
 </div>
+</template>
+
+<script setup lang="ts">
+defineProps({
+	  time: {
+	type: String,
+	required: true,
+  },
+  price: {
+	type: String,
+	required: true,
+  },
+  subtext: {
+	type: String,
+	required: true,
+  },
+  isMostPopular: {
+	type: Boolean,
+	required: true,
+  },
+})
+
+</script>

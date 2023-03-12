@@ -5,9 +5,11 @@ export interface Props {
   isEmpty?: any;
   href?: any;
   salDelay?: any;
+  onClick?: any;
+  id?: string;
 }
 
-const { text, classList, isEmpty, href, salDelay } = Astro.props;
+const { text, classList, isEmpty, href, salDelay, id } = Astro.props;
 ---
 
 <style>
@@ -36,6 +38,7 @@ const { text, classList, isEmpty, href, salDelay } = Astro.props;
 </style>
 
 <a
+  id={id}
   href={href}
   data-sal-delay={salDelay}
   data-sal="slide-up"

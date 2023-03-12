@@ -1,12 +1,12 @@
 import { defineConfig } from "astro/config";
 import NetlifyCMS from "astro-netlify-cms";
 import tailwind from "@astrojs/tailwind";
-
 import image from "@astrojs/image";
 import { astroImageTools } from "astro-imagetools";
 
-// https://astro.build/config
 import compress from "astro-compress";
+
+// https://astro.build/config
 
 // https://astro.build/config
 
@@ -72,25 +72,21 @@ export default defineConfig({
                 widget: "string",
                 label: "Paslauga 3 info",
               },
-
               {
                 name: "price2Weeks",
                 widget: "string",
                 label: "Kaina 2 savaites",
               },
-
               {
                 name: "price3Months",
                 widget: "string",
                 label: "Kaina 3 menesiai",
               },
-
               {
                 name: "price1Month",
                 widget: "string",
                 label: "Kaina 1 menesis",
               },
-
               {
                 name: "statistika",
                 widget: "list",
@@ -121,7 +117,6 @@ export default defineConfig({
                   },
                 ],
               },
-
               {
                 name: "winnings",
                 widget: "list",

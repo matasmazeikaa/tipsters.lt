@@ -7,6 +7,7 @@ import "@splidejs/splide/css/core";
 import BaseHead from "../components/BaseHead.astro";
 import Button from "../components/Button.astro";
 import PriceCard from "../components/PriceCard.astro";
+import Layout from "../layouts/Layout.astro";
 import { Picture } from "@astrojs/image/components";
 
 const siteData = await Astro.glob("./posts/index.md");
@@ -36,6 +37,10 @@ const currentYear = new Date().getFullYear();
 
 <script>
   import Splide from "@splidejs/splide";
+  import querystring from "querystring";
+  import Buffer from "buffer";
+  import md5 from "md5";
+
   import sal from "sal.js";
   import {
     disableBodyScroll,
@@ -100,432 +105,381 @@ const currentYear = new Date().getFullYear();
       alert(e);
     }
   }, 3000);
+
+  class WebToPay {
+    defaultConfig = {};
+    payUrl = "https://www.paysera.com/pay/";
+    xmlUrl = "https://www.paysera.com/new/api/paymentMethods/";
+    key = "http://downloads.paysera.com/download/public.key";
+    version = "1.6";
+
+    constructor(config) {
+      this.defaultConfig = config || {};
+    }
+
+    buildRequestUrl(params) {
+      var requestParams = this.mergeParams(params);
+      var encodedParams = this.encode(requestParams);
+      var signature = this.sign(encodedParams);
+
+      return this.createUrl(encodedParams, signature);
+    }
+
+    checkCallback(request) {
+      var ss1 = this.sign(request.data);
+      return request.ss1 == ss1;
+    }
+
+    // For internal usage
+
+    mergeParams(params) {
+      var requestParams = JSON.parse(JSON.stringify(this.defaultConfig));
+      delete requestParams.sign_password;
+      for (var key in params) {
+        requestParams[key] = params[key];
+      }
+
+      return requestParams;
+    }
+
+    encode(params) {
+      var rawUrl = querystring.stringify(params);
+      var encodedUrl = rawUrl.toString("base64");
+      var uglyfiedUrl = encodedUrl.replace("/", "_").replace("+", "-");
+
+      return encodedUrl;
+    }
+
+    decode(encodedData) {
+      var prettyfiedEncodedData = encodedData
+        .replace("_", "/")
+        .replace("-", "+");
+      var decodedUrl = new Buffer(prettyfiedEncodedData, "base64").toString(
+        "ascii"
+      );
+      var params = querystring.parse(decodedUrl);
+
+      return params;
+    }
+
+    sign(data) {
+      return md5(data + this.sign_password);
+    }
+
+    createUrl(data, sign) {
+      return this.payUrl + "?data=" + data + "&sign=" + sign;
+    }
+  }
+
+  const makeRequest = async () => {
+    const webToPay = new WebToPay({
+      projectid: "226737",
+      sign_password: "Labasrytas123**",
+    });
+
+    const url = webToPay.buildRequestUrl({
+      orderid: 123,
+      accepturl: "https://www.example.com/accept",
+      cancelurl: "https://www.example.com/accept",
+      callbackurl: "https://www.example.com/accept",
+      version: 9,
+      test: 1,
+    });
+
+    console.log(url);
+
+    const rawResponse = await fetch(url, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors",
+    });
+
+    const content = await rawResponse.json();
+  };
+
+  window.addEventListener("load", function () {
+    window.document.getElementById("69.99€").addEventListener("click", () => {
+      makeRequest();
+    });
+  });
 </script>
 
-<html lang="en">
-  <head>
-    <BaseHead />
-  </head>
-
-  <body>
-    <main>
-      <header class="fixed top-0 left-0 right-0 z-20">
-        <div
-          class="flex nav-container items-center relative justify-between py-40 container"
-        >
-          <img
-            src="/assets/media/tipsters-logo.svg"
-            class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
-            alt="tipsters"
-            data-sal="slide-up"
-            data-sal-delay="100"
-            width="245"
-            height="20"
-          />
-
-          <nav
-            data-sal="slide-up"
-            data-sal-delay="100"
-            class="lg:flex gap-64 hidden lg:visible"
-          >
-            <a
-              data-sal="slide-up"
-              data-sal-delay="100"
-              class="text-medium"
-              href="#paslaugos">Paslaugos</a
-            >
-            <a
-              data-sal="slide-up"
-              data-sal-delay="200"
-              class="text-medium"
-              href="#narystes">Narystės</a
-            >
-            <a
-              data-sal="slide-up"
-              data-sal-delay="300"
-              class="text-medium"
-              href="#atsiliepimai">Atsiliepimai</a
-            >
-            <a
-              data-sal="slide-up"
-              data-sal-delay="400"
-              class="text-medium"
-              href="#statistika">Statistika</a
-            >
-            <a
-              data-sal="slide-up"
-              data-sal-delay="500"
-              class="text-medium"
-              href="#kontaktai">Kontaktai</a
-            >
-          </nav>
-
-          <input
-            class="checkbox right-0"
-            type="checkbox"
-            name="Mobile menu"
-            aria-label="Mobile menu"
-            id="checkbox"
-          />
-          <div class="hamburger-lines relative">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-
-          <div class="menu-items">
-            <div class="flex flex-col gap-64">
-              <a class="text-nav-mobile" href="#paslaugos">Paslaugos</a>
-              <a class="text-nav-mobile" href="#narystes">Narystės</a>
-              <a class="text-nav-mobile" href="#atsiliepimai">Atsiliepimai</a>
-              <a class="text-nav-mobile" href="#statistika">Statistika</a>
-              <a class="text-nav-mobile" href="#kontaktai">Kontaktai</a>
-            </div>
-            <div class="flex mt-32 items-center justify-center">
-              <a href="https://t.me/TipstersLt" class="p-24" target="_blank">
-                <img
-                  width="32"
-                  height="32"
-                  alt="telegram-icon"
-                  src="/assets/media/telegram-icon.svg"
-                />
-              </a>
-              <a
-                class="p-24"
-                href="https://www.instagram.com/tipsters.lt/"
-                target="_blank"
-              >
-                <img
-                  width="32"
-                  height="32"
-                  src="/assets/media/instagram-icon.svg"
-                  alt="instagram-icon"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-    </main>
-    <section class="hero h-full relative">
-      <div
-        class="container h-screen mx-auto hero-content text-center z-10 flex flex-col justify-center items-center"
+<Layout>
+  <section class="hero h-full relative">
+    <div
+      class="container h-screen mx-auto hero-content text-center z-10 flex flex-col justify-center items-center"
+    >
+      <h1
+        data-sal="slide-up"
+        data-sal-delay="100"
+        class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
       >
-        <h1
-          data-sal="slide-up"
-          data-sal-delay="100"
-          class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
-        >
-          {title}
-        </h1>
-        <p
-          data-sal="slide-up"
-          data-sal-delay="200"
-          class="max-w-[65.6rem] mb-40 text-medium"
-        >
-          {subtitle}
-        </p>
-        <Button salDelay={"300"} href="#narystes" text="Įsigyti narystę" />
-      </div>
-      <div class="hero-scroll">
-        <img
-          class="mouse-animation"
-          src="/assets/media/mouse.svg"
-          alt="mouse"
-          width="32"
-          height="32"
-          class="w-[3.2rem]"
-        />
-      </div>
-    </section>
-    <div id="paslaugos" class="mx-auto container pt-24 md:pt-96 md:pb-72 pb-56">
-      <h2
-        class="text-center text-h2 md:h2 mb-48 md:mb-80"
+        {title}
+      </h1>
+      <p
         data-sal="slide-up"
         data-sal-delay="200"
+        class="max-w-[65.6rem] mb-40 text-medium"
       >
-        Paslaugos
-      </h2>
-      <div class="flex flex-wrap justify-center gap-48 md:gap-64">
-        <div class="text-center max-w-[35.2rem] md:w-1/3">
-          <img
-            class="w-[4rem] mb-16 ml-auto mr-auto"
-            src="/assets/media/analyses-icon.svg"
-            width="40"
-            height="40"
-            alt="analyses-icon"
-            data-sal="slide-up"
-            data-sal-delay="200"
-          />
-          <h3
-            data-sal="slide-up"
-            data-sal-delay="200"
-            class="text-h3 mb-16"
-            class="text-h3"
-          >
-            {paslauga1Title}
-          </h3>
-          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
-            {paslauga1Info}
-          </p>
-        </div>
-        <div class="text-center max-w-[35.2rem] md:w-1/3">
-          <img
-            class="w-[4rem] mb-16 ml-auto mr-auto"
-            src="/assets/media/money-icon.svg"
-            alt="money-icon"
-            width="40"
-            height="40"
-            data-sal="slide-up"
-            data-sal-delay="200"
-          />
-          <h3
-            data-sal="slide-up"
-            data-sal-delay="200"
-            class="text-h3 mb-16"
-            class="text-h3"
-          >
-            {paslauga2Title}
-          </h3>
-          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
-            {paslauga2Info}
-          </p>
-        </div>
-        <div class="text-center max-w-[35.2rem] md:w-1/3">
-          <img
-            class="w-[4rem] mb-16 ml-auto mr-auto"
-            src="/assets/media/info-icon.svg"
-            alt="info-icon"
-            width="40"
-            height="40"
-            data-sal="slide-up"
-            data-sal-delay="200"
-          />
-          <h3
-            class="text-h3 mb-16"
-            data-sal="slide-up"
-            data-sal-delay="200"
-            class="text-h3"
-          >
-            {paslauga3Title}
-          </h3>
-          <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
-            {paslauga3Info}
-          </p>
-        </div>
-      </div>
+        {subtitle}
+      </p>
+      <Button salDelay={"300"} href="#narystes" text="Įsigyti narystę" />
     </div>
-    <div id="narystes" class="container mx-auto md:96 md:pb-80 py-56">
-      <h2
-        class="text-center text-h2 mb-48 md:mb-100"
-        data-sal="slide-up"
-        data-sal-delay="200"
-      >
-        Narystės
-      </h2>
-      <div class="pricing-grid">
-        <PriceCard time="2 Savaitės" price={price2Weeks} />
-        <PriceCard
-          isMostPopular={true}
-          time="3 Mėnesiai"
-          price={price3Months}
-        />
-        <PriceCard time="1 Mėnesis" price={price1Month} />
-      </div>
-    </div>
-
-    <div class="container mx-auto md:py-96 py-56" id="atsiliepimai">
-      <div
-        class="mb-48 md:mb-80 text-h2 text-center"
-        data-sal="slide-up"
-        data-sal-delay="200"
-      >
-        Atsiliepimai
-      </div>
-
-      <div
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="splide mx-auto"
-        role="group"
-        aria-label="Atsiliepimu galerija"
-      >
-        <div class="splide__track">
-          <ul class="splide__list">
-            {
-              atsiliepimai.map((atsiliepimas, index) => (
-                <li class="flex justify-center items-center splide__slide">
-                  <Picture
-                    src={atsiliepimas.atsiliepimaiFoto}
-                    class="mx-auto"
-                    widths={[400, 800, 1200]}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    fit="contain"
-                    aspectRatio="1:1"
-                    alt={`atsiliepimas-${index + 1}`}
-                  />
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div id="statistika" class="container mx-auto md:py-96 py-56">
-      <h2
-        class="mb-48 md:mb-80 text-h2 text-center md:mb80"
-        data-sal="slide-up"
-        data-sal-delay="200"
-      >
-        Statistika
-      </h2>
-      <div
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="splide mx-auto"
-        role="group"
-        aria-label="Statistikos galerija"
-      >
-        <div class="splide__track">
-          <ul class="splide__list">
-            {
-              statistika.map((statistika, index) => (
-                <li class="flex justify-center items-center splide__slide">
-                  <Picture
-                    src={statistika.statistikosFoto}
-                    class="mx-auto"
-                    widths={[400, 800, 1200]}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    fit="contain"
-                    aspectRatio="1:1"
-                    alt={`statistika-${index + 1}`}
-                  />
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div id="laimejimai" class="container mx-auto md:py-96 py-56">
-      <h2
-        class="mb-48 md:mb-80 text-h2 text-center md:mb80"
-        data-sal="slide-up"
-        data-sal-delay="200"
-      >
-        Laimėjimai
-      </h2>
-      <div
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="splide mx-auto"
-        role="group"
-        aria-label="Laimejimu galerija"
-      >
-        <div class="splide__track">
-          <ul class="splide__list">
-            {
-              winnings.map((winning, index) => (
-                <li class="flex justify-center items-center splide__slide">
-                  <Picture
-                    src={winning.winningFoto}
-                    class="mx-auto"
-                    widths={[400, 800, 1200]}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    fit="contain"
-                    aspectRatio="1:1"
-                    alt={`laimejimas-${index + 1}`}
-                  />
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="container md:py-96 py-56 text-center mx-auto">
+    <div class="hero-scroll">
       <img
-        src="/assets/media/tipsters-logo.svg"
-        alt="tipsters-logo"
-        width="224"
-        height="20"
-        class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
+        class="mouse-animation"
+        src="/assets/media/mouse.svg"
+        alt="mouse"
+        width="32"
+        height="32"
+        class="w-[3.2rem]"
       />
-      <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
-        <p
+    </div>
+  </section>
+  <div id="paslaugos" class="mx-auto container pt-24 md:pt-96 md:pb-72 pb-56">
+    <h2
+      class="text-center text-h2 md:h2 mb-48 md:mb-80"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      Paslaugos
+    </h2>
+    <div class="flex flex-wrap justify-center gap-48 md:gap-64">
+      <div class="text-center max-w-[35.2rem] md:w-1/3">
+        <img
+          class="w-[4rem] mb-16 ml-auto mr-auto"
+          src="/assets/media/analyses-icon.svg"
+          width="40"
+          height="40"
+          alt="analyses-icon"
           data-sal="slide-up"
           data-sal-delay="200"
-          class="mb-24 md:mb-32 text-large"
-        >
-          Tipsters.It komanda - sporto lažybų ekspertai, kurie yra sukaupę 8
-          metų patirtį būtent šioje lažybų srityje.
-        </p>
-        <p
+        />
+        <h3
           data-sal="slide-up"
           data-sal-delay="200"
-          class="mb-24 md:mb-32 text-large"
+          class="text-h3 mb-16"
+          class="text-h3"
         >
-          Viskas oficialu ir paremta tikra statistika, kuri nuolat bus pildoma.
-        </p>
-        <p
-          data-sal="slide-up"
-          data-sal-delay="200"
-          class="mb-24 md:mb-32 text-large"
-        >
-          Pagalba visais klausimais 24/7.
-        </p>
-        <p
-          data-sal="slide-up"
-          data-sal-delay="200"
-          class="mb-24 md:mb-32 text-large"
-        >
-          Kviečiame jungtis prie mūsų komandos ir išbandyti tikrų profesionalų
-          darbą!
+          {paslauga1Title}
+        </h3>
+        <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+          {paslauga1Info}
         </p>
       </div>
-      <div
-        class="lg:w-full w-max mx-auto lg:flex-row flex-col items-start gap-32 flex lg:flex flex-wrap justify-around"
-        id="kontaktai"
+      <div class="text-center max-w-[35.2rem] md:w-1/3">
+        <img
+          class="w-[4rem] mb-16 ml-auto mr-auto"
+          src="/assets/media/money-icon.svg"
+          alt="money-icon"
+          width="40"
+          height="40"
+          data-sal="slide-up"
+          data-sal-delay="200"
+        />
+        <h3
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="text-h3 mb-16"
+          class="text-h3"
+        >
+          {paslauga2Title}
+        </h3>
+        <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+          {paslauga2Info}
+        </p>
+      </div>
+      <div class="text-center max-w-[35.2rem] md:w-1/3">
+        <img
+          class="w-[4rem] mb-16 ml-auto mr-auto"
+          src="/assets/media/info-icon.svg"
+          alt="info-icon"
+          width="40"
+          height="40"
+          data-sal="slide-up"
+          data-sal-delay="200"
+        />
+        <h3
+          class="text-h3 mb-16"
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="text-h3"
+        >
+          {paslauga3Title}
+        </h3>
+        <p data-sal="slide-up" data-sal-delay="200" class="text-medium">
+          {paslauga3Info}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div id="narystes" class="container mx-auto md:96 md:pb-80 py-56">
+    <h2
+      class="text-center text-h2 mb-48 md:mb-100"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      Narystės
+    </h2>
+    <div class="pricing-grid">
+      <PriceCard time="2 Savaitės" price={price2Weeks} />
+      <PriceCard isMostPopular={true} time="3 Mėnesiai" price={price3Months} />
+      <PriceCard time="1 Mėnesis" price={price1Month} />
+    </div>
+  </div>
+
+  <div class="container mx-auto md:py-96 py-56" id="atsiliepimai">
+    <div
+      class="mb-48 md:mb-80 text-h2 text-center"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      Atsiliepimai
+    </div>
+
+    <div
+      data-sal="slide-up"
+      data-sal-delay="200"
+      class="splide mx-auto"
+      role="group"
+      aria-label="Atsiliepimu galerija"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          {
+            atsiliepimai.map((atsiliepimas, index) => (
+              <li class="flex justify-center items-center splide__slide">
+                <Picture
+                  src={atsiliepimas.atsiliepimaiFoto}
+                  class="mx-auto"
+                  widths={[400, 800, 1200]}
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  fit="contain"
+                  aspectRatio="1:1"
+                  alt={`atsiliepimas-${index + 1}`}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="statistika" class="container mx-auto md:py-96 py-56">
+    <h2
+      class="mb-48 md:mb-80 text-h2 text-center md:mb80"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      Statistika
+    </h2>
+    <div
+      data-sal="slide-up"
+      data-sal-delay="200"
+      class="splide mx-auto"
+      role="group"
+      aria-label="Statistikos galerija"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          {
+            statistika.map((statistika, index) => (
+              <li class="flex justify-center items-center splide__slide">
+                <Picture
+                  src={statistika.statistikosFoto}
+                  class="mx-auto"
+                  widths={[400, 800, 1200]}
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  fit="contain"
+                  aspectRatio="1:1"
+                  alt={`statistika-${index + 1}`}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="laimejimai" class="container mx-auto md:py-96 py-56">
+    <h2
+      class="mb-48 md:mb-80 text-h2 text-center md:mb80"
+      data-sal="slide-up"
+      data-sal-delay="200"
+    >
+      Laimėjimai
+    </h2>
+    <div
+      data-sal="slide-up"
+      data-sal-delay="200"
+      class="splide mx-auto"
+      role="group"
+      aria-label="Laimejimu galerija"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          {
+            winnings.map((winning, index) => (
+              <li class="flex justify-center items-center splide__slide">
+                <Picture
+                  src={winning.winningFoto}
+                  class="mx-auto"
+                  widths={[400, 800, 1200]}
+                  sizes="(max-width: 800px) 100vw, 800px"
+                  fit="contain"
+                  aspectRatio="1:1"
+                  alt={`laimejimas-${index + 1}`}
+                />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container md:py-96 py-56 text-center mx-auto">
+    <img
+      src="/assets/media/tipsters-logo.svg"
+      alt="tipsters-logo"
+      width="224"
+      height="20"
+      class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
+    />
+    <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
+      <p
         data-sal="slide-up"
         data-sal-delay="200"
+        class="mb-24 md:mb-32 text-large"
       >
-        <a
-          href="https://t.me/TipstersLt"
-          target="_blank"
-          class="flex items-center"
-        >
-          <img
-            class="mr-12"
-            src="/assets/media/telegram-icon.svg"
-            width="32"
-            height="32"
-            alt="telegram-icon"
-          />
-          <span class="text-medium-large">Telegram grupė</span>
-        </a>
-        <!-- <div class="flex items-center">
-          <img alt="email-icon" class="mr-12" src="/assets/media/email-icon.svg"
-          ></img>
-          <span class="text-medium-large">pagalba@tipsters.lt</span>
-        </div> -->
-        <a
-          href="https://www.instagram.com/tipsters.lt/"
-          target="_blank"
-          class="flex items-center"
-        >
-          <img
-            alt="instagram-icon"
-            class="mr-12"
-            width="32"
-            height="32"
-            src="/assets/media/instagram-icon.svg"
-          />
-          <span class="text-medium-large">Instagram</span>
-        </a>
-      </div>
+        Tipsters.It komanda - sporto lažybų ekspertai, kurie yra sukaupę 8 metų
+        patirtį būtent šioje lažybų srityje.
+      </p>
+      <p
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="mb-24 md:mb-32 text-large"
+      >
+        Viskas oficialu ir paremta tikra statistika, kuri nuolat bus pildoma.
+      </p>
+      <p
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="mb-24 md:mb-32 text-large"
+      >
+        Pagalba visais klausimais 24/7.
+      </p>
+      <p
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="mb-24 md:mb-32 text-large"
+      >
+        Kviečiame jungtis prie mūsų komandos ir išbandyti tikrų profesionalų
+        darbą!
+      </p>
     </div>
-    <div class="container mx-auto text-center text-[1.2rem] py-[1.2rem]">
-      © {currentYear} Tipsters.lt. Visos teisės saugomos.
-    </div>
-  </body>
-</html>
+  </div>
+</Layout>
