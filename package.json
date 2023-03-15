@@ -22,6 +22,7 @@
     "astro-netlify-cms": "^0.5.2",
     "body-scroll-lock": "^4.0.0-beta.0",
     "md5": "^2.3.0",
+    "paysera-nodejs": "^1.0.2",
     "querystring": "^0.2.1",
     "sal.js": "^0.8.5",
     "sharp": "^0.31.3",
