@@ -21,7 +21,45 @@ const { price, time, isMostPopular, subtext } = Astro.props;
   }
 </style>
 
-<script></script>
+<script define:vars={{ price }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById(price);
+
+    button.addEventListener("click", () => {
+      console.log(price);
+
+      const realPrice = price.replace("€", "").replace(".", "");
+
+      console.log(realPrice);
+
+      const url = "http://45.9.190.55/tipsters/pay";
+
+      const fetchRedirectUrl = async () => {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: realPrice,
+          }),
+        });
+
+        const data = await response.json();
+
+        console.log(data.redirectUrl);
+
+        if (data.redirectUrl) {
+          window.location.href = data.redirectUrl;
+        }
+
+        return data.redirectUrl;
+      };
+
+      console.log(fetchRedirectUrl());
+    });
+  });
+</script>
 
 <div
   class:list={[

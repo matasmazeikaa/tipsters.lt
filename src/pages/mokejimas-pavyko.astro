@@ -1,0 +1,94 @@
+---
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const liveChat = document.getElementById("live-chat");
+
+    liveChat.addEventListener("click", function () {
+      if (window?.tidioChatApi) {
+        window?.tidioChatApi.open();
+      }
+    });
+  });
+</script>
+
+<Layout>
+  <section class="hero h-full relative">
+    <div
+      class="container h-screen mx-auto hero-content text-center z-10 flex flex-col justify-center items-center"
+    >
+      <h1
+        data-sal="slide-up"
+        data-sal-delay="100"
+        class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
+      >
+        Sveikiname įsigijus narystę!
+      </h1>
+      <p
+        data-sal="slide-up"
+        data-sal-delay="200"
+        class="max-w-[65.6rem] mb-40 text-medium"
+      >
+        Susisiekite su mumis live chat mygtuku arba per instagram.
+      </p>
+      <div
+        class="lg:w-full w-max mx-auto lg:flex-row flex-col items-start gap-32 flex lg:flex flex-wrap justify-around"
+        id="kontaktai"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        <a
+          href="https://t.me/TipstersLt"
+          target="_blank"
+          class="flex items-center"
+        >
+          <img
+            class="mr-12"
+            src="/assets/media/telegram-icon.svg"
+            width="32"
+            height="32"
+            alt="telegram-icon"
+          />
+          <span class="text-medium-large">Telegram grupė</span>
+        </a>
+        <a id="live-chat" class="flex items-center cursor-pointer">
+          <img
+            class="mr-12"
+            src="/assets/media/livechat-icon.svg"
+            width="32"
+            height="32"
+            alt="telegram-icon"
+          />
+          <span class="text-medium-large">Livechat</span>
+        </a>
+        <a
+          href="https://www.instagram.com/tipsters.lt/"
+          target="_blank"
+          class="flex items-center"
+        >
+          <img
+            alt="instagram-icon"
+            class="mr-12"
+            width="32"
+            height="32"
+            src="/assets/media/instagram-icon.svg"
+          />
+          <span class="text-medium-large">Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <img
+        class="mouse-animation"
+        src="/assets/media/mouse.svg"
+        alt="mouse"
+        width="32"
+        height="32"
+        class="w-[3.2rem]"
+      />
+    </div>
+  </section>
+</Layout>

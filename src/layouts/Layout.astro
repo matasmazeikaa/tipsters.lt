@@ -69,15 +69,17 @@ const currentYear = new Date().getFullYear();
         <div
           class="flex nav-container items-center relative justify-between py-40 container"
         >
-          <img
-            src="/assets/media/tipsters-logo.svg"
-            class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
-            alt="tipsters"
-            data-sal="slide-up"
-            data-sal-delay="100"
-            width="245"
-            height="20"
-          />
+          <a href="/">
+            <img
+              src="/assets/media/tipsters-logo.svg"
+              class="lg:max-w-[24.5rem] max-w-[16rem] w-full z-10"
+              alt="tipsters"
+              data-sal="slide-up"
+              data-sal-delay="100"
+              width="245"
+              height="20"
+            />
+          </a>
 
           <nav
             data-sal="slide-up"
@@ -164,6 +166,47 @@ const currentYear = new Date().getFullYear();
       </header>
     </main>
     <slot />
+    <div class="container md:py-96 py-56 text-center mx-auto">
+      <img
+        src="/assets/media/tipsters-logo.svg"
+        alt="tipsters-logo"
+        width="224"
+        height="20"
+        class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
+      />
+      <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Tipsters.It komanda - sporto lažybų ekspertai, kurie yra sukaupę 8
+          metų patirtį būtent šioje lažybų srityje.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Viskas oficialu ir paremta tikra statistika, kuri nuolat bus pildoma.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Pagalba visais klausimais 24/7.
+        </p>
+        <p
+          data-sal="slide-up"
+          data-sal-delay="200"
+          class="mb-24 md:mb-32 text-large"
+        >
+          Kviečiame jungtis prie mūsų komandos ir išbandyti tikrų profesionalų
+          darbą!
+        </p>
+      </div>
+    </div>
     <div
       class="lg:w-full w-max mx-auto lg:flex-row flex-col items-start gap-32 flex lg:flex flex-wrap justify-around"
       id="kontaktai"

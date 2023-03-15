@@ -27,6 +27,7 @@ const {
   atsiliepimai,
   statistika,
   winnings,
+  plans,
 } = siteData[0].frontmatter;
 
 const currentYear = new Date().getFullYear();
@@ -99,113 +100,14 @@ const currentYear = new Date().getFullYear();
 
     S.src = "https://code.tidio.co/8qndyl9q0e2bzlwizig77fqlv8y8uw7j.js";
 
+    console.log("what");
+
     try {
       document.getElementsByTagName("HEAD")[0].appendChild(S);
     } catch (e) {
       alert(e);
     }
-  }, 3000);
-
-  class WebToPay {
-    defaultConfig = {};
-    payUrl = "https://www.paysera.com/pay/";
-    xmlUrl = "https://www.paysera.com/new/api/paymentMethods/";
-    key = "http://downloads.paysera.com/download/public.key";
-    version = "1.6";
-
-    constructor(config) {
-      this.defaultConfig = config || {};
-    }
-
-    buildRequestUrl(params) {
-      var requestParams = this.mergeParams(params);
-      var encodedParams = this.encode(requestParams);
-      var signature = this.sign(encodedParams);
-
-      return this.createUrl(encodedParams, signature);
-    }
-
-    checkCallback(request) {
-      var ss1 = this.sign(request.data);
-      return request.ss1 == ss1;
-    }
-
-    // For internal usage
-
-    mergeParams(params) {
-      var requestParams = JSON.parse(JSON.stringify(this.defaultConfig));
-      delete requestParams.sign_password;
-      for (var key in params) {
-        requestParams[key] = params[key];
-      }
-
-      return requestParams;
-    }
-
-    encode(params) {
-      var rawUrl = querystring.stringify(params);
-      var encodedUrl = rawUrl.toString("base64");
-      var uglyfiedUrl = encodedUrl.replace("/", "_").replace("+", "-");
-
-      return encodedUrl;
-    }
-
-    decode(encodedData) {
-      var prettyfiedEncodedData = encodedData
-        .replace("_", "/")
-        .replace("-", "+");
-      var decodedUrl = new Buffer(prettyfiedEncodedData, "base64").toString(
-        "ascii"
-      );
-      var params = querystring.parse(decodedUrl);
-
-      return params;
-    }
-
-    sign(data) {
-      return md5(data + this.sign_password);
-    }
-
-    createUrl(data, sign) {
-      return this.payUrl + "?data=" + data + "&sign=" + sign;
-    }
-  }
-
-  const makeRequest = async () => {
-    const webToPay = new WebToPay({
-      projectid: "226737",
-      sign_password: "Labasrytas123**",
-    });
-
-    const url = webToPay.buildRequestUrl({
-      orderid: 123,
-      accepturl: "https://www.example.com/accept",
-      cancelurl: "https://www.example.com/accept",
-      callbackurl: "https://www.example.com/accept",
-      version: 9,
-      test: 1,
-    });
-
-    console.log(url);
-
-    const rawResponse = await fetch(url, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-      mode: "no-cors",
-    });
-
-    const content = await rawResponse.json();
-  };
-
-  window.addEventListener("load", function () {
-    window.document.getElementById("69.99€").addEventListener("click", () => {
-      makeRequest();
-    });
-  });
+  }, 1000);
 </script>
 
 <Layout>
@@ -326,9 +228,15 @@ const currentYear = new Date().getFullYear();
       Narystės
     </h2>
     <div class="pricing-grid">
-      <PriceCard time="2 Savaitės" price={price2Weeks} />
-      <PriceCard isMostPopular={true} time="3 Mėnesiai" price={price3Months} />
-      <PriceCard time="1 Mėnesis" price={price1Month} />
+      {
+        plans.map(({ planTitle, planPrice, isMostPopular }) => (
+          <PriceCard
+            time={planTitle}
+            price={planPrice}
+            isMostPopular={isMostPopular}
+          />
+        ))
+      }
     </div>
   </div>
 
@@ -439,47 +347,6 @@ const currentYear = new Date().getFullYear();
           }
         </ul>
       </div>
-    </div>
-  </div>
-  <div class="container md:py-96 py-56 text-center mx-auto">
-    <img
-      src="/assets/media/tipsters-logo.svg"
-      alt="tipsters-logo"
-      width="224"
-      height="20"
-      class="mx-auto lg:max-w-[38.4rem] w-[22.4rem] mb-48 md:mb-80"
-    />
-    <div class="max-w-[80rem] mx-auto mb-48 md:mb-80">
-      <p
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="mb-24 md:mb-32 text-large"
-      >
-        Tipsters.It komanda - sporto lažybų ekspertai, kurie yra sukaupę 8 metų
-        patirtį būtent šioje lažybų srityje.
-      </p>
-      <p
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="mb-24 md:mb-32 text-large"
-      >
-        Viskas oficialu ir paremta tikra statistika, kuri nuolat bus pildoma.
-      </p>
-      <p
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="mb-24 md:mb-32 text-large"
-      >
-        Pagalba visais klausimais 24/7.
-      </p>
-      <p
-        data-sal="slide-up"
-        data-sal-delay="200"
-        class="mb-24 md:mb-32 text-large"
-      >
-        Kviečiame jungtis prie mūsų komandos ir išbandyti tikrų profesionalų
-        darbą!
-      </p>
     </div>
   </div>
 </Layout>

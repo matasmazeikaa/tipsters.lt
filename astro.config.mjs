@@ -7,10 +7,6 @@ import { astroImageTools } from "astro-imagetools";
 import compress from "astro-compress";
 
 // https://astro.build/config
-
-// https://astro.build/config
-
-// https://astro.build/config
 export default defineConfig({
   integrations: [
     tailwind(),
@@ -33,59 +29,30 @@ export default defineConfig({
             folder: "src/pages/posts",
             fields: [
               {
-                name: "title",
-                widget: "string",
-                label: "Hero sekcijos titulas",
-              },
-              {
-                name: "subtitle",
-                widget: "string",
-                label: "Hero sekcijos subtitulas",
-              },
-              {
-                name: "paslauga1Title",
-                widget: "string",
-                label: "Paslauga 1 titulas",
-              },
-              {
-                name: "paslauga2Title",
-                widget: "string",
-                label: "Paslauga 2 titulas",
-              },
-              {
-                name: "paslauga3Title",
-                widget: "string",
-                label: "Paslauga 3 titulas",
-              },
-              {
-                name: "paslauga1Info",
-                widget: "string",
-                label: "Paslauga 1 info",
-              },
-              {
-                name: "paslauga2Info",
-                widget: "string",
-                label: "Paslauga 2 info",
-              },
-              {
-                name: "paslauga3Info",
-                widget: "string",
-                label: "Paslauga 3 info",
-              },
-              {
-                name: "price2Weeks",
-                widget: "string",
-                label: "Kaina 2 savaites",
-              },
-              {
-                name: "price3Months",
-                widget: "string",
-                label: "Kaina 3 menesiai",
-              },
-              {
-                name: "price1Month",
-                widget: "string",
-                label: "Kaina 1 menesis",
+                name: "plans",
+                widget: "list",
+                label: "Narystes",
+                media_folder: "public/assets/media",
+                fields: [
+                  {
+                    name: "planTitle",
+                    widget: "string",
+                    label: "Narystes laikotarpis",
+                    required: true,
+                  },
+                  {
+                    name: "isMostPopular",
+                    widget: "boolean",
+                    label: "Ar yra populiariausia?",
+                    required: false,
+                  },
+                  {
+                    name: "planPrice",
+                    widget: "string",
+                    label: "Narystes kaina",
+                    required: true,
+                  },
+                ],
               },
               {
                 name: "statistika",

@@ -1,40 +1,4 @@
 ---
-authorURL: https://twitter.com/swithinbank
-title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
-subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
-  pagrindinę informacija rasite mūsų Telegram kanale.
-paslauga1Title: Pilnai išanalizuoti statymai
-paslauga2Title: Klaidingos lažybų bendrovių linijos
-paslauga3Title: Pagalba klientams 24/7
-paslauga1Info: Visi musu komandos duodami statymai yra išanalizuoti ir argumentuoti
-paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų, kuriais mes ir pasinaudojam :)
-paslauga3Info: Atsakysime į visus jums iškilusius klausimus
-price2Weeks: 69.99€
-price3Months: 249.99€
-price1Month: 119.99€
-statistika:
-  - statistikosFoto: /assets/media/statistika3.jpeg
-  - statistikosFoto: /assets/media/statistika2.jpeg
-  - statistikosFoto: /assets/media/statistika1.jpeg
-atsiliepimai:
-  - atsiliepimaiFoto: /assets/media/image00005.jpeg
-  - atsiliepimaiFoto: /assets/media/image00045.jpeg
-  - atsiliepimaiFoto: /assets/media/image00007.jpeg
-  - atsiliepimaiFoto: /assets/media/image00005.jpeg
-  - atsiliepimaiFoto: /assets/media/image00008.jpeg
-  - atsiliepimaiFoto: /assets/media/image00009.jpeg
-  - atsiliepimaiFoto: /assets/media/image00010.jpeg
-  - atsiliepimaiFoto: /assets/media/image00011.jpeg
-  - atsiliepimaiFoto: /assets/media/image00012.jpeg
-  - atsiliepimaiFoto: /assets/media/image00013.jpeg
-  - atsiliepimaiFoto: /assets/media/image00014.jpeg
-  - atsiliepimaiFoto: /assets/media/image00015.jpeg
-  - atsiliepimaiFoto: /assets/media/image00016.jpeg
-  - atsiliepimaiFoto: /assets/media/image00017.jpeg
-  - atsiliepimaiFoto: /assets/media/image00018.jpeg
-  - atsiliepimaiFoto: /assets/media/image00019.jpeg
-  - atsiliepimaiFoto: /assets/media/image00021.jpeg
-  - atsiliepimaiFoto: /assets/media/image00022.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas1.jpeg
@@ -118,4 +82,49 @@ winnings:
   - winningFoto: /assets/media/laimejimas79.jpeg
   - winningFoto: /assets/media/laimejimas80.jpeg
   - winningFoto: /assets/media/laimejimas81.jpeg
+authorURL: https://twitter.com/swithinbank
+paslauga1Info: Visi musu komandos duodami statymai yra išanalizuoti ir argumentuoti
+paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
+  kuriais mes ir pasinaudojam :)
+statistika:
+  - statistikosFoto: /assets/media/statistika3.jpeg
+  - statistikosFoto: /assets/media/statistika2.jpeg
+  - statistikosFoto: /assets/media/statistika1.jpeg
+paslauga3Info: Atsakysime į visus jums iškilusius klausimus
+plans:
+  - planTitle: 2 Savaitės
+    planPrice: 69.99€
+  - planTitle: 3 Mėnesiai
+    planPrice: 249.99€
+    isMostPopular: true
+  - planTitle: 1 Mėnesis
+    planPrice: 119.99€
+price2Weeks: 69.99€
+subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
+  pagrindinę informacija rasite mūsų Telegram kanale.
+title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
+price1Month: 119.99€
+price3Months: 249.99€
+paslauga3Title: Pagalba klientams 24/7
+atsiliepimai:
+  - atsiliepimaiFoto: /assets/media/image00005.jpeg
+  - atsiliepimaiFoto: /assets/media/image00045.jpeg
+  - atsiliepimaiFoto: /assets/media/image00007.jpeg
+  - atsiliepimaiFoto: /assets/media/image00005.jpeg
+  - atsiliepimaiFoto: /assets/media/image00008.jpeg
+  - atsiliepimaiFoto: /assets/media/image00009.jpeg
+  - atsiliepimaiFoto: /assets/media/image00010.jpeg
+  - atsiliepimaiFoto: /assets/media/image00011.jpeg
+  - atsiliepimaiFoto: /assets/media/image00012.jpeg
+  - atsiliepimaiFoto: /assets/media/image00013.jpeg
+  - atsiliepimaiFoto: /assets/media/image00014.jpeg
+  - atsiliepimaiFoto: /assets/media/image00015.jpeg
+  - atsiliepimaiFoto: /assets/media/image00016.jpeg
+  - atsiliepimaiFoto: /assets/media/image00017.jpeg
+  - atsiliepimaiFoto: /assets/media/image00018.jpeg
+  - atsiliepimaiFoto: /assets/media/image00019.jpeg
+  - atsiliepimaiFoto: /assets/media/image00021.jpeg
+  - atsiliepimaiFoto: /assets/media/image00022.jpeg
+paslauga2Title: Klaidingos lažybų bendrovių linijos
+paslauga1Title: Pilnai išanalizuoti statymai
 ---

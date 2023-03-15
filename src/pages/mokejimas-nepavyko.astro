@@ -1,0 +1,21 @@
+---
+import Button from "../components/Button.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="hero h-full relative">
+    <div
+      class="container h-screen mx-auto hero-content text-center z-10 flex flex-col justify-center items-center"
+    >
+      <h1
+        data-sal="slide-up"
+        data-sal-delay="100"
+        class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
+      >
+        Atsiprašome, bet mokėjimas nepavyko.
+      </h1>
+      <Button salDelay={"300"} href="/#narystes" text="Įsigyti narystę" />
+    </div>
+  </section>
+</Layout>
