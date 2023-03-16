@@ -104,7 +104,6 @@ export default defineConfig({
         ],
       },
       previewStyles: ["/src/styles/global.css"],
-      disableIdentityWidgetInjection: true,
     }),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
