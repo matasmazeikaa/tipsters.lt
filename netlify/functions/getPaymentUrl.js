@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {
     accepturl: "https://tipsters.lt/mokejimas-pavyko",
     cancelurl: "https://tipsters.lt/mokejimas-nepavyko",
     callbackurl: "https://tipsters.lt/.netlify/functions/ok",
-    test: 1,
+    test: 0,
   });
 
   const redirectUrl = paysera.buildRequestUrl({
