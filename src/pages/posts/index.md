@@ -99,8 +99,6 @@ plans:
     isMostPopular: true
   - planTitle: 1 Mėnesis
     planPrice: 119.99€
-  - planTitle: "1"
-    planPrice: 1.00€
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
