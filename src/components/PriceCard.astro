@@ -6,9 +6,11 @@ export interface Props {
   subtext?: any;
   price?: any;
   isMostPopular?: boolean;
+  planDescriptions?: any;
 }
 
-const { price, time, isMostPopular, subtext } = Astro.props;
+const { price, time, isMostPopular, subtext, planDescriptions } = Astro.props;
+console.log(planDescriptions);
 ---
 
 <style>
@@ -86,36 +88,22 @@ const { price, time, isMostPopular, subtext } = Astro.props;
     <h2 class="text-h2">{price}</h2>
     <p class="text-medium">VIP narystė</p>
     <div class="line mb-24 h-[0.5px]"></div>
-    <div class="flex items-center mb-16">
-      <img
-        src="/assets/media/checkmark.png"
-        alt="checkmark"
-        width="22"
-        height="15"
-        class="inline mr-16"
-      />
-      <p class="text-medium">Pilnai išanalizuoti statymai</p>
-    </div>
-    <div class="flex items-center mb-16">
-      <img
-        width="22"
-        height="15"
-        src="/assets/media/checkmark.png"
-        alt="checkmark"
-        class="mr-16"
-      />
-      <p class="text-medium">Klaidingos lažybų bendrovių linijos</p>
-    </div>
-    <div class="flex items-center mb-24">
-      <img
-        width="22"
-        height="15"
-        src="/assets/media/checkmark.png"
-        alt="checkmark"
-        class="mr-16"
-      />
-      <p class="text-medium">Pagalba klientams 24/7</p>
-    </div>
+    {
+      planDescriptions.map(({ planDescription }) => (
+        <div class="flex items-center mb-16">
+          <div class="flex items-center mb-16">
+            <img
+              src="/assets/media/checkmark.png"
+              alt="checkmark"
+              width="22"
+              height="15"
+              class="inline mr-16"
+            />
+            <p class="text-medium">{planDescription}</p>
+          </div>
+        </div>
+      ))
+    }
     <p class="text-medium mb-64">
       {subtext}
     </p>

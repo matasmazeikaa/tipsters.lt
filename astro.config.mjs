@@ -52,6 +52,15 @@ export default defineConfig({
                     label: "Narystes kaina",
                     required: true,
                   },
+                  {
+                    name: "planDescriptions",
+                    widget: "list",
+                    label: "Narystes aprasymas",
+                    required: true,
+                    fields: [
+                      { name: "planDescription", widget: "string", required: true },
+                    ]
+                  }
                 ],
               },
               {

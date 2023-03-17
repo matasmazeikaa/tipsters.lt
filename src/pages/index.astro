@@ -229,13 +229,16 @@ const currentYear = new Date().getFullYear();
     </h2>
     <div class="pricing-grid">
       {
-        plans.map(({ planTitle, planPrice, isMostPopular }) => (
-          <PriceCard
-            time={planTitle}
-            price={planPrice}
-            isMostPopular={isMostPopular}
-          />
-        ))
+        plans.map(
+          ({ planTitle, planPrice, isMostPopular, planDescriptions }) => (
+            <PriceCard
+              time={planTitle}
+              price={planPrice}
+              isMostPopular={isMostPopular}
+              planDescriptions={planDescriptions}
+            />
+          )
+        )
       }
     </div>
   </div>
