@@ -1,4 +1,18 @@
 ---
+plans:
+  - planTitle: 2 Savaitės
+    planPrice: 69.99€
+  - planTitle: 3 Mėnesiai
+    planPrice: 249.99€
+    isMostPopular: true
+  - planTitle: 1 Mėnesis
+    planPrice: 119.99€
+  - planTitle: Savaitgalio narystė
+    planPrice: 29.99€
+statistika:
+  - statistikosFoto: /assets/media/statistika3.jpeg
+  - statistikosFoto: /assets/media/statistika2.jpeg
+  - statistikosFoto: /assets/media/statistika1.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas1.jpeg
@@ -86,19 +100,7 @@ authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi musu komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
   kuriais mes ir pasinaudojam :)
-statistika:
-  - statistikosFoto: /assets/media/statistika3.jpeg
-  - statistikosFoto: /assets/media/statistika2.jpeg
-  - statistikosFoto: /assets/media/statistika1.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
-plans:
-  - planTitle: 2 Savaitės
-    planPrice: 69.99€
-  - planTitle: 3 Mėnesiai
-    planPrice: 249.99€
-    isMostPopular: true
-  - planTitle: 1 Mėnesis
-    planPrice: 119.99€
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
