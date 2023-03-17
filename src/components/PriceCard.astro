@@ -91,16 +91,14 @@ console.log(planDescriptions);
     {
       planDescriptions.map(({ planDescription }) => (
         <div class="flex items-center mb-16">
-          <div class="flex items-center mb-16">
-            <img
-              src="/assets/media/checkmark.png"
-              alt="checkmark"
-              width="22"
-              height="15"
-              class="inline mr-16"
-            />
-            <p class="text-medium">{planDescription}</p>
-          </div>
+          <img
+            src="/assets/media/checkmark.png"
+            alt="checkmark"
+            width="22"
+            height="15"
+            class="inline mr-16"
+          />
+          <p class="text-medium">{planDescription}</p>
         </div>
       ))
     }
