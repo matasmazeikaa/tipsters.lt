@@ -1,5 +1,12 @@
 ---
 plans:
+  - planTitle: 1 Mėnesis
+    planPrice: 119.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 60 - 70 Prognozių
   - planTitle: 2 Savaitės
     planPrice: 69.99€
     planDescriptions:
@@ -15,13 +22,6 @@ plans:
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
       - planDescription: 180 - 200 Prognozių
-  - planTitle: 1 Mėnesis
-    planPrice: 119.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 60 - 70 Prognozių
 statistika:
   - statistikosFoto: /assets/media/97d438d3-ba82-4b8a-8e88-23ef7fc99b7c.png
   - statistikosFoto: /assets/media/72c19261-bc4e-45a0-81c9-410a75c68f4d.png
@@ -99,16 +99,21 @@ winnings:
   - winningFoto: /assets/media/laimejimas69.jpeg
   - winningFoto: /assets/media/laimejimas70.jpeg
   - winningFoto: /assets/media/laimejimas71.jpeg
-  - winningFoto: /assets/media/laimejimas72.jpeg
   - winningFoto: /assets/media/laimejimas73.jpeg
+  - winningFoto: /assets/media/laimejimas72.jpeg
   - winningFoto: /assets/media/laimejimas74.jpeg
   - winningFoto: /assets/media/laimejimas75.jpeg
   - winningFoto: /assets/media/laimejimas76.jpeg
+  - winningFoto: /assets/media/laimejimas79.jpeg
   - winningFoto: /assets/media/laimejimas77.jpeg
   - winningFoto: /assets/media/laimejimas78.jpeg
-  - winningFoto: /assets/media/laimejimas79.jpeg
   - winningFoto: /assets/media/laimejimas80.jpeg
   - winningFoto: /assets/media/laimejimas81.jpeg
+  - winningFoto: /assets/media/043dc9d5-f25b-44b0-9462-87b26d8b8440.jpeg
+  - winningFoto: /assets/media/3f5fbb24-d4a1-430d-8c77-f3a3931ad589.png
+  - winningFoto: /assets/media/307532ff-9395-4ee7-8c14-2a812ba1ea76.png
+  - winningFoto: /assets/media/1379461f-cbfc-43af-8610-0afac0b8f7e6.png
+  - winningFoto: /assets/media/ceb137b7-647d-4c69-afe2-122840301119.png
 authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi musu komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
