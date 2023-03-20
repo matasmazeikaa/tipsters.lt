@@ -23,8 +23,8 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 60 - 70 Prognozių
 statistika:
-  - statistikosFoto: /assets/media/statistika3.jpeg
-  - statistikosFoto: /assets/media/statistika2.jpeg
+  - statistikosFoto: /assets/media/97d438d3-ba82-4b8a-8e88-23ef7fc99b7c.png
+  - statistikosFoto: /assets/media/72c19261-bc4e-45a0-81c9-410a75c68f4d.png
   - statistikosFoto: /assets/media/statistika1.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
@@ -123,8 +123,8 @@ price3Months: 249.99€
 paslauga3Title: Pagalba klientams 24/7
 atsiliepimai:
   - atsiliepimaiFoto: /assets/media/image00005.jpeg
-  - atsiliepimaiFoto: /assets/media/image00045.jpeg
   - atsiliepimaiFoto: /assets/media/image00007.jpeg
+  - atsiliepimaiFoto: /assets/media/image00045.jpeg
   - atsiliepimaiFoto: /assets/media/image00005.jpeg
   - atsiliepimaiFoto: /assets/media/image00008.jpeg
   - atsiliepimaiFoto: /assets/media/image00009.jpeg
