@@ -22,6 +22,8 @@ const currentYear = new Date().getFullYear();
 
   const allScrollRef = document.getElementsByClassName("scrollRef");
 
+  const mytap = window.ontouchstart === null ? "touchstart" : "click";
+
   for (var i = 0; i < allScrollRef.length; ++i) {
     var item = allScrollRef[i];
 
@@ -31,7 +33,7 @@ const currentYear = new Date().getFullYear();
       continue;
     }
 
-    item.addEventListener("click", function (e) {
+    item.addEventListener(mytap, function (e) {
       e.preventDefault();
 
       document
