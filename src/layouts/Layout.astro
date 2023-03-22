@@ -20,12 +20,18 @@ const currentYear = new Date().getFullYear();
     root: null,
   });
 
-  document.querySelectorAll('a[href^="/"]').forEach((anchor) => {
-    const href = anchor.getAttribute("href");
+  const allScrollRef = document.getElementsByClassName("scrollRef");
 
-    if (!href.includes("#")) return;
+  for (var i = 0; i < allScrollRef.length; ++i) {
+    var item = allScrollRef[i];
 
-    anchor.addEventListener("click", function (e) {
+    const href = item.getAttribute("href");
+
+    if (!href.includes("#") || window.location.pathname !== "/") {
+      continue;
+    }
+
+    item.addEventListener("click", function (e) {
       e.preventDefault();
 
       document
@@ -37,7 +43,7 @@ const currentYear = new Date().getFullYear();
       document.querySelector("#checkbox").checked = false;
       clearAllBodyScrollLocks();
     });
-  });
+  }
 
   document
     .querySelectorAll("#checkbox")[0]
@@ -94,13 +100,13 @@ const currentYear = new Date().getFullYear();
             <a
               data-sal="slide-up"
               data-sal-delay="100"
-              class="text-medium"
+              class="text-medium scrollRef"
               href="/#paslaugos">Paslaugos</a
             >
             <a
               data-sal="slide-up"
               data-sal-delay="200"
-              class="text-medium"
+              class="text-medium scrollRef"
               href="/#narystes">Narystės</a
             >
             <a
@@ -112,13 +118,13 @@ const currentYear = new Date().getFullYear();
             <a
               data-sal="slide-up"
               data-sal-delay="400"
-              class="text-medium"
+              class="text-medium scrollRef"
               href="/#statistika">Statistika</a
             >
             <a
               data-sal="slide-up"
               data-sal-delay="500"
-              class="text-medium"
+              class="text-medium scrollRef"
               href="/#kontaktai">Kontaktai</a
             >
           </nav>
@@ -138,11 +144,20 @@ const currentYear = new Date().getFullYear();
 
           <div class="menu-items">
             <div class="flex flex-col gap-64">
-              <a class="text-nav-mobile" href="/#paslaugos">Paslaugos</a>
-              <a class="text-nav-mobile" href="/#narystes">Narystės</a>
-              <a class="text-nav-mobile" href="/#atsiliepimai">Atsiliepimai</a>
-              <a class="text-nav-mobile" href="/#statistika">Statistika</a>
-              <a class="text-nav-mobile" href="/#kontaktai">Kontaktai</a>
+              <a class="text-nav-mobile scrollRef" href="/#paslaugos"
+                >Paslaugos</a
+              >
+              <a class="text-nav-mobile scrollRef" href="/#narystes">Narystės</a
+              >
+              <a class="text-nav-mobile scrollRef" href="/#atsiliepimai"
+                >Atsiliepimai</a
+              >
+              <a class="text-nav-mobile scrollRef" href="/#statistika"
+                >Statistika</a
+              >
+              <a class="text-nav-mobile scrollRef" href="/#kontaktai"
+                >Kontaktai</a
+              >
             </div>
             <div class="flex mt-32 items-center justify-center">
               <a href="https://t.me/TipstersLt" class="p-24" target="_blank">
