@@ -36,22 +36,20 @@ const currentYear = new Date().getFullYear();
     item.addEventListener(mytap, function (e) {
       e.preventDefault();
 
-      document
-        .querySelector(this.getAttribute("href").replace("/", ""))
-        .scrollIntoView({
-          behavior: "smooth",
-        });
-
       document.querySelector("#checkbox").checked = false;
       clearAllBodyScrollLocks();
+
+      document.querySelector(href.replace("/", "")).scrollIntoView({
+        behavior: "smooth",
+      });
     });
   }
 
   document
     .querySelectorAll("#checkbox")[0]
-    .addEventListener("change", function () {
+    .addEventListener("change", function (e) {
       if (this.checked) {
-        disableBodyScroll(document.querySelector("body"));
+        disableBodyScroll(document.querySelector("menu-items"));
       } else {
         clearAllBodyScrollLocks();
       }
