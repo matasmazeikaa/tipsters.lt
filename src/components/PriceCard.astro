@@ -10,7 +10,28 @@ export interface Props {
 }
 
 const { price, time, isMostPopular, subtext, planDescriptions } = Astro.props;
-console.log(planDescriptions);
+
+const realPrice = price.replace("€", "").replace(".", "");
+let redirectUrl = "";
+
+const response = await fetch(
+  "https://tipsters.lt/.netlify/functions/getPaymentUrl",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      amount: realPrice,
+    }),
+  }
+);
+
+const data = await response.json();
+
+if (data.redirectUrl) {
+  redirectUrl = data.redirectUrl;
+}
 ---
 
 <style>
@@ -22,44 +43,6 @@ console.log(planDescriptions);
     border: 1px solid #eee;
   }
 </style>
-
-<script define:vars={{ price }}>
-  document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById(price);
-
-    button.addEventListener("click", () => {
-      console.log(price);
-
-      const realPrice = price.replace("€", "").replace(".", "");
-
-      console.log(realPrice);
-
-      const fetchRedirectUrl = async () => {
-        const response = await fetch("/.netlify/functions/getPaymentUrl", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            amount: realPrice,
-          }),
-        });
-
-        const data = await response.json();
-
-        console.log(data.redirectUrl);
-
-        if (data.redirectUrl) {
-          window.location.href = data.redirectUrl;
-        }
-
-        return data.redirectUrl;
-      };
-
-      console.log(fetchRedirectUrl());
-    });
-  });
-</script>
 
 <div
   class:list={[
@@ -107,6 +90,7 @@ console.log(planDescriptions);
     </p>
     <Button
       id={price}
+      href={redirectUrl}
       classList="w-full"
       isEmpty={!isMostPopular}
       text="Įsigyti narystę"

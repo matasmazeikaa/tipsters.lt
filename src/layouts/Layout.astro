@@ -20,13 +20,19 @@ const currentYear = new Date().getFullYear();
     root: null,
   });
 
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  document.querySelectorAll('a[href^="/"]').forEach((anchor) => {
+    const href = anchor.getAttribute("href");
+
+    if (!href.includes("#")) return;
+
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
 
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
+      document
+        .querySelector(this.getAttribute("href").replace("/", ""))
+        .scrollIntoView({
+          behavior: "smooth",
+        });
 
       document.querySelector("#checkbox").checked = false;
       clearAllBodyScrollLocks();
@@ -36,7 +42,6 @@ const currentYear = new Date().getFullYear();
   document
     .querySelectorAll("#checkbox")[0]
     .addEventListener("change", function () {
-      console.log(this.checked);
       if (this.checked) {
         disableBodyScroll(document.querySelector("body"));
       } else {

@@ -38,16 +38,6 @@ const currentYear = new Date().getFullYear();
 
 <script>
   import Splide from "@splidejs/splide";
-  import querystring from "querystring";
-  import Buffer from "buffer";
-  import md5 from "md5";
-
-  import sal from "sal.js";
-  import {
-    disableBodyScroll,
-    enableBodyScroll,
-    clearAllBodyScrollLocks,
-  } from "body-scroll-lock";
 
   document.querySelectorAll(".splide").forEach((carousel: any, index) =>
     new Splide(carousel, {
@@ -63,51 +53,6 @@ const currentYear = new Date().getFullYear();
       },
     }).mount()
   );
-
-  sal({
-    threshold: 0.2,
-    once: true,
-    root: null,
-  });
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-
-      document.querySelector("#checkbox").checked = false;
-      clearAllBodyScrollLocks();
-    });
-  });
-
-  document
-    .querySelectorAll("#checkbox")[0]
-    .addEventListener("change", function () {
-      console.log(this.checked);
-      if (this.checked) {
-        disableBodyScroll(document.querySelector("body"));
-      } else {
-        clearAllBodyScrollLocks();
-      }
-    });
-
-  setTimeout(function () {
-    let S = document.createElement("script");
-    S.type = "text/javascript";
-
-    S.src = "https://code.tidio.co/8qndyl9q0e2bzlwizig77fqlv8y8uw7j.js";
-
-    console.log("what");
-
-    try {
-      document.getElementsByTagName("HEAD")[0].appendChild(S);
-    } catch (e) {
-      alert(e);
-    }
-  }, 1000);
 </script>
 
 <Layout>
@@ -129,7 +74,7 @@ const currentYear = new Date().getFullYear();
       >
         {subtitle}
       </p>
-      <Button salDelay={"300"} href="#narystes" text="Įsigyti narystę" />
+      <Button salDelay={"300"} href="/#narystes" text="Įsigyti narystę" />
     </div>
     <div class="hero-scroll">
       <img

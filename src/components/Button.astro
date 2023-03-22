@@ -7,9 +7,10 @@ export interface Props {
   salDelay?: any;
   onClick?: any;
   id?: string;
+  target?: string;
 }
 
-const { text, classList, isEmpty, href, salDelay, id } = Astro.props;
+const { text, classList, isEmpty, href, salDelay, id, target } = Astro.props;
 ---
 
 <style>
@@ -43,6 +44,5 @@ const { text, classList, isEmpty, href, salDelay, id } = Astro.props;
   href={href}
   data-sal-delay={salDelay}
   data-sal="slide-up"
-  target="_blank"
   class:list={[classList, "button", { "button-empty": isEmpty }]}>{text}</a
 >
