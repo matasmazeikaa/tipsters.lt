@@ -7,32 +7,58 @@ export interface Props {
   price?: any;
   isMostPopular?: boolean;
   planDescriptions?: any;
+  id: string;
 }
 
-const { price, time, isMostPopular, subtext, planDescriptions } = Astro.props;
+const { price, time, isMostPopular, subtext, planDescriptions, id } =
+  Astro.props;
 
-const realPrice = price.replace("€", "").replace(".", "");
-let redirectUrl = "";
-
-const response = await fetch(
-  "https://tipsters.lt/.netlify/functions/getPaymentUrl",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      amount: realPrice,
-    }),
-  }
-);
-
-const data = await response.json();
-
-if (data.redirectUrl) {
-  redirectUrl = data.redirectUrl;
-}
+const realId = id.replace(/ /g, "-").toLowerCase();
 ---
+
+<style>
+  .line {
+    color: #eee;
+  }
+
+  .border-gray {
+    border: 1px solid #eee;
+  }
+</style>
+
+<script define:vars={{ price, realId }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById(price);
+
+    button.addEventListener("click", () => {
+      const realPrice = document
+        .getElementsByClassName(realId)[0]
+        .innerHTML.trim()
+        .replace("€", "")
+        .replace(".", "");
+
+      const fetchRedirectUrl = async () => {
+        const response = await fetch("/.netlify/functions/getPaymentUrl", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: realPrice,
+          }),
+        });
+
+        const data = await response.json();
+
+        if (data.redirectUrl) {
+          window.location.href = data.redirectUrl;
+        }
+      };
+
+      fetchRedirectUrl();
+    });
+  });
+</script>
 
 <style>
   .line {
@@ -68,7 +94,15 @@ if (data.redirectUrl) {
     }}
   >
     <p class="text-large mb-8">{time}</p>
-    <h2 class="text-h2" id="discount-price">{price}</h2>
+    <h2
+      class:list={{
+        "text-h2": true,
+        [`${realId}`]: true,
+      }}
+      id="discount-price"
+    >
+      {price}
+    </h2>
     <p class="text-medium">VIP narystė</p>
     <div class="line mb-24 h-[0.5px]"></div>
     {
@@ -90,7 +124,6 @@ if (data.redirectUrl) {
     </p>
     <Button
       id={price}
-      href={redirectUrl}
       classList="w-full"
       isEmpty={!isMostPopular}
       text="Įsigyti narystę"

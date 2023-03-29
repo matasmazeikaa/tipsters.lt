@@ -220,8 +220,12 @@ const {
     <div class="pricing-grid">
       {
         plans.map(
-          ({ planTitle, planPrice, isMostPopular, planDescriptions }) => (
+          (
+            { planTitle, planPrice, isMostPopular, planDescriptions },
+            index
+          ) => (
             <PriceCard
+              id={`${planTitle}-${index}`}
               time={planTitle}
               price={planPrice}
               isMostPopular={isMostPopular}
