@@ -57,7 +57,31 @@ export default defineConfig({
               required: true
             }]
           }]
-        }, {
+        },
+        
+        {
+          name: "nuolaidos",
+          widget: "list",
+          label: "Nuolaidos",
+          media_folder: "public/assets/media",
+          fields: [{
+            name: "discountTitle",
+            widget: "string",
+            label: "Nuolaidos pavadinimas (mazosiomis raidemis)",
+            required: true
+          }, {
+            name: "isTurnedOn",
+            widget: "boolean",
+            label: "Įjungtas",
+            required: true
+          }, {
+            name: "percent",
+            widget: "string",
+            label: "Nuolaidos procentas (Įvest be procento zenklo)",
+            required: true
+          }]
+        },
+        {
           name: "statistika",
           widget: "list",
           label: "Statistikos foto",

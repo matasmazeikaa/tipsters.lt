@@ -1,0 +1,48 @@
+---
+export interface Props {
+  text?: string;
+  classList?: any;
+  isEmpty?: any;
+  href?: any;
+  salDelay?: any;
+  onClick?: any;
+  id?: string;
+  target?: string;
+  discounts: any;
+}
+
+const { text, classList, isEmpty, discounts, href, salDelay, id, target } =
+  Astro.props;
+---
+
+<script define:vars={discounts}>
+  console.log(discounts);
+</script>
+
+<style>
+  .input {
+    height: 52px;
+    width: 32rem;
+    max-width: 32rem;
+    width: 100%;
+    border-radius: 1rem;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    padding: 1.6rem 2.8rem;
+    font-family: "Quicksand";
+    font-size: 1.6rem;
+    color: var(--black-100);
+
+    /* transition: 0.1s al ease-in-out; */
+  }
+</style>
+
+<input
+  id={id}
+  data-sal-delay={salDelay}
+  data-sal="slide-up"
+  class:list={[classList, "button", { "button-empty": isEmpty }]}
+  placeholder="Nuolaidos kodas"
+  class:list={[classList, "input"]}
+/>

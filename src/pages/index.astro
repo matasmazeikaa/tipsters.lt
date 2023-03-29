@@ -9,6 +9,7 @@ import Button from "../components/Button.astro";
 import PriceCard from "../components/PriceCard.astro";
 import Layout from "../layouts/Layout.astro";
 import { Picture } from "@astrojs/image/components";
+import DiscountInput from "../components/DiscountInput.astro";
 
 const siteData = await Astro.glob("./posts/index.md");
 
@@ -21,20 +22,48 @@ const {
   paslauga1Info,
   paslauga2Info,
   paslauga3Info,
-  price2Weeks,
-  price3Months,
-  price1Month,
+  nuolaidos,
   atsiliepimai,
   statistika,
   winnings,
   plans,
 } = siteData[0].frontmatter;
 
-const currentYear = new Date().getFullYear();
-
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
+<script define:vars={{ nuolaidos }} type="module">
+  const discountInput = document.querySelector("#discount-input");
+
+  const applyDiscount = (discount) => {
+    document.querySelectorAll("#discount-price").forEach((price) => {
+      const discountedPrice =
+        (Number(price.innerHTML.replace(/[^0-9.-]+/g, "")) *
+          (100 - Number(discount.percent))) /
+        100;
+      const roundedPrice = Math.round(discountedPrice * 2) / 2 - 0.01;
+
+      price.innerHTML = `${roundedPrice}€`;
+    });
+  };
+
+  const onInput = () => {
+    nuolaidos.forEach((discount) => {
+      if (discount.discountTitle === event.target.value) {
+        hasDiscounted = true;
+
+        applyDiscount(discount);
+
+        discountInput.removeEventListener("input", onInput);
+      }
+    });
+  };
+
+  if (discountInput) {
+    discountInput.addEventListener("input", onInput);
+  }
+</script>
 
 <script>
   import Splide from "@splidejs/splide";
@@ -170,13 +199,26 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
   <div id="narystes" class="container mx-auto md:96 md:pb-80 py-56">
-    <h2
-      class="text-center text-h2 mb-48 md:mb-100"
-      data-sal="slide-up"
-      data-sal-delay="200"
-    >
-      Narystės
-    </h2>
+    <div class="mb-48 md:mb-100">
+      <h2
+        class="text-center text-h2 mb-24"
+        data-sal="slide-up"
+        data-sal-delay="200"
+      >
+        Narystės
+      </h2>
+
+      {
+        nuolaidos.length && (
+          <DiscountInput
+            classList="input block mx-auto"
+            id="discount-input"
+            discounts={nuolaidos}
+          />
+        )
+      }
+    </div>
+
     <div class="pricing-grid">
       {
         plans.map(
