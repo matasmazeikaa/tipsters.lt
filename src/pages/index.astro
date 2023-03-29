@@ -51,8 +51,6 @@ const {
   const onInput = () => {
     nuolaidos.forEach((discount) => {
       if (discount.discountTitle === event.target.value) {
-        hasDiscounted = true;
-
         applyDiscount(discount);
 
         discountInput.removeEventListener("input", onInput);
