@@ -1,4 +1,33 @@
 ---
+plans:
+  - planTitle: 2 Savaitės
+    planPrice: 69.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 30 - 40 Prognozių
+  - planTitle: 3 Mėnesiai
+    planPrice: 249.99€
+    isMostPopular: true
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 180 - 200 Prognozių
+  - planTitle: 1 Mėnesis
+    planPrice: 119.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 60 - 70 Prognozių
+    isMostPopular: false
+statistika:
+  - statistikosFoto: /assets/media/140138f3-0d91-4fbf-bd06-d070c453c2bb.png
+  - statistikosFoto: /assets/media/76f26835-0509-4b9b-8764-3f0c9c89312f.png
+  - statistikosFoto: /assets/media/statistika1.jpeg
+  - statistikosFoto: /assets/media/e1568b5b-4270-477e-9c55-192849726ccc.png
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas1.jpeg
@@ -87,48 +116,24 @@ winnings:
   - winningFoto: /assets/media/307532ff-9395-4ee7-8c14-2a812ba1ea76.png
   - winningFoto: /assets/media/1379461f-cbfc-43af-8610-0afac0b8f7e6.png
   - winningFoto: /assets/media/ceb137b7-647d-4c69-afe2-122840301119.png
+  - winningFoto: /assets/media/b627add0-09ab-4a1a-80a6-9b42d6494092.png
+  - winningFoto: /assets/media/022aedbe-28b6-4801-8fef-b8f5d56acb4c.png
+  - winningFoto: /assets/media/efdc0bcc-7770-4abf-b275-00847a92ed58.png
+  - winningFoto: /assets/media/daaaacf3-bd9b-459c-a04f-e5f1b57ab860.jpeg
+  - winningFoto: /assets/media/526260cd-c42d-426e-abc5-44be911c16ce.jpeg
+  - winningFoto: /assets/media/4cc9e152-e833-418e-aa63-ff2710dd0b26.png
+  - winningFoto: /assets/media/0843fbdd-fdb9-424e-abae-070751fee379.png
 authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
   kuriais mes ir pasinaudojam :)
-statistika:
-  - statistikosFoto: /assets/media/97d438d3-ba82-4b8a-8e88-23ef7fc99b7c.png
-  - statistikosFoto: /assets/media/72c19261-bc4e-45a0-81c9-410a75c68f4d.png
-  - statistikosFoto: /assets/media/statistika1.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
-plans:
-  - planTitle: 2 Savaitės
-    planPrice: 69.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 30 - 40 Prognozių
-  - planTitle: 3 Mėnesiai
-    planPrice: 249.99€
-    isMostPopular: true
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 180 - 200 Prognozių
-  - planTitle: 1 Mėnesis
-    planPrice: 119.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 60 - 70 Prognozių
-    isMostPopular: false
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
 title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
 price1Month: 119.99€
-nuolaidos:
-  - discountTitle: tipsters25
-    isTurnedOn: true
-    percent: "25"
+nuolaidos: []
 price3Months: 249.99€
 paslauga3Title: Pagalba klientams 24/7
 atsiliepimai:
@@ -137,19 +142,24 @@ atsiliepimai:
   - atsiliepimaiFoto: /assets/media/image00045.jpeg
   - atsiliepimaiFoto: /assets/media/image00005.jpeg
   - atsiliepimaiFoto: /assets/media/image00008.jpeg
+  - atsiliepimaiFoto: /assets/media/c1bb71c1-a793-4114-9dec-9333bf89677a.jpeg
   - atsiliepimaiFoto: /assets/media/image00009.jpeg
   - atsiliepimaiFoto: /assets/media/image00010.jpeg
   - atsiliepimaiFoto: /assets/media/image00011.jpeg
   - atsiliepimaiFoto: /assets/media/image00012.jpeg
   - atsiliepimaiFoto: /assets/media/image00013.jpeg
+  - atsiliepimaiFoto: /assets/media/1cf81993-ef0f-4ddd-a3b0-9b26e93f9c36.jpeg
   - atsiliepimaiFoto: /assets/media/image00014.jpeg
   - atsiliepimaiFoto: /assets/media/image00015.jpeg
   - atsiliepimaiFoto: /assets/media/image00016.jpeg
+  - atsiliepimaiFoto: /assets/media/4a3db5eb-f52f-4dea-95fc-6bff6fab7c88.jpeg
   - atsiliepimaiFoto: /assets/media/image00017.jpeg
   - atsiliepimaiFoto: /assets/media/image00018.jpeg
+  - atsiliepimaiFoto: /assets/media/775c3d42-8878-4b7b-beef-c485b4e99b69.jpeg
   - atsiliepimaiFoto: /assets/media/image00019.jpeg
   - atsiliepimaiFoto: /assets/media/image00021.jpeg
   - atsiliepimaiFoto: /assets/media/image00022.jpeg
+  - atsiliepimaiFoto: /assets/media/98a18360-636e-4ba8-80b0-f15661b26b59.jpeg
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga1Title: Pilnai išanalizuoti statymai
 ---
