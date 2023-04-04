@@ -123,6 +123,7 @@ winnings:
   - winningFoto: /assets/media/526260cd-c42d-426e-abc5-44be911c16ce.jpeg
   - winningFoto: /assets/media/4cc9e152-e833-418e-aa63-ff2710dd0b26.png
   - winningFoto: /assets/media/0843fbdd-fdb9-424e-abae-070751fee379.png
+  - winningFoto: /assets/media/496ebc4c-9723-4686-a79f-4f6001c6f442.png
 authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
@@ -160,6 +161,16 @@ atsiliepimai:
   - atsiliepimaiFoto: /assets/media/image00021.jpeg
   - atsiliepimaiFoto: /assets/media/image00022.jpeg
   - atsiliepimaiFoto: /assets/media/98a18360-636e-4ba8-80b0-f15661b26b59.jpeg
+  - atsiliepimaiFoto: /assets/media/4d422bab-9486-43c1-89ad-d0e2c3988103.jpeg
+  - atsiliepimaiFoto: /assets/media/691a7918-d57c-47f7-bed6-064af9ef07eb.jpeg
+  - atsiliepimaiFoto: /assets/media/d8e3c458-6929-4ba6-be4a-a28f925c6170.jpeg
+  - atsiliepimaiFoto: /assets/media/27333f8e-0734-402b-af60-9d205e30cc1c.jpeg
+  - atsiliepimaiFoto: /assets/media/6bcc599e-40d3-4ae6-b8e9-7647a1c8bf68.jpeg
+  - atsiliepimaiFoto: /assets/media/3c1065e9-3ec8-485f-82dc-b84bca2ee999.jpeg
+  - atsiliepimaiFoto: /assets/media/ce1a1463-0fa5-42ae-ac90-b4dd60f81891.jpeg
+  - atsiliepimaiFoto: /assets/media/1263adae-71e2-45a3-9cf4-87fd8d9e5252.jpeg
+  - atsiliepimaiFoto: /assets/media/cda3e78a-e7f4-4f6d-beda-fd0fe52093f7.jpeg
+  - atsiliepimaiFoto: /assets/media/e954e978-cf89-487f-8279-18de05f5553b.jpeg
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga1Title: Pilnai išanalizuoti statymai
 ---
