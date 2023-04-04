@@ -148,29 +148,29 @@ atsiliepimai:
   - atsiliepimaiFoto: /assets/media/image00010.jpeg
   - atsiliepimaiFoto: /assets/media/image00011.jpeg
   - atsiliepimaiFoto: /assets/media/image00012.jpeg
+  - atsiliepimaiFoto: /assets/media/e954e978-cf89-487f-8279-18de05f5553b.jpeg
   - atsiliepimaiFoto: /assets/media/image00013.jpeg
   - atsiliepimaiFoto: /assets/media/1cf81993-ef0f-4ddd-a3b0-9b26e93f9c36.jpeg
   - atsiliepimaiFoto: /assets/media/image00014.jpeg
   - atsiliepimaiFoto: /assets/media/image00015.jpeg
   - atsiliepimaiFoto: /assets/media/image00016.jpeg
+  - atsiliepimaiFoto: /assets/media/4d422bab-9486-43c1-89ad-d0e2c3988103.jpeg
   - atsiliepimaiFoto: /assets/media/4a3db5eb-f52f-4dea-95fc-6bff6fab7c88.jpeg
   - atsiliepimaiFoto: /assets/media/image00017.jpeg
+  - atsiliepimaiFoto: /assets/media/1263adae-71e2-45a3-9cf4-87fd8d9e5252.jpeg
   - atsiliepimaiFoto: /assets/media/image00018.jpeg
+  - atsiliepimaiFoto: /assets/media/27333f8e-0734-402b-af60-9d205e30cc1c.jpeg
   - atsiliepimaiFoto: /assets/media/775c3d42-8878-4b7b-beef-c485b4e99b69.jpeg
   - atsiliepimaiFoto: /assets/media/image00019.jpeg
+  - atsiliepimaiFoto: /assets/media/691a7918-d57c-47f7-bed6-064af9ef07eb.jpeg
   - atsiliepimaiFoto: /assets/media/image00021.jpeg
   - atsiliepimaiFoto: /assets/media/image00022.jpeg
   - atsiliepimaiFoto: /assets/media/98a18360-636e-4ba8-80b0-f15661b26b59.jpeg
-  - atsiliepimaiFoto: /assets/media/4d422bab-9486-43c1-89ad-d0e2c3988103.jpeg
-  - atsiliepimaiFoto: /assets/media/691a7918-d57c-47f7-bed6-064af9ef07eb.jpeg
   - atsiliepimaiFoto: /assets/media/d8e3c458-6929-4ba6-be4a-a28f925c6170.jpeg
-  - atsiliepimaiFoto: /assets/media/27333f8e-0734-402b-af60-9d205e30cc1c.jpeg
   - atsiliepimaiFoto: /assets/media/6bcc599e-40d3-4ae6-b8e9-7647a1c8bf68.jpeg
   - atsiliepimaiFoto: /assets/media/3c1065e9-3ec8-485f-82dc-b84bca2ee999.jpeg
   - atsiliepimaiFoto: /assets/media/ce1a1463-0fa5-42ae-ac90-b4dd60f81891.jpeg
-  - atsiliepimaiFoto: /assets/media/1263adae-71e2-45a3-9cf4-87fd8d9e5252.jpeg
   - atsiliepimaiFoto: /assets/media/cda3e78a-e7f4-4f6d-beda-fd0fe52093f7.jpeg
-  - atsiliepimaiFoto: /assets/media/e954e978-cf89-487f-8279-18de05f5553b.jpeg
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga1Title: Pilnai išanalizuoti statymai
 ---
