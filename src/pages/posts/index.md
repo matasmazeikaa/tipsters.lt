@@ -106,6 +106,13 @@ statistika:
   - statistikosFoto: /assets/media/e1568b5b-4270-477e-9c55-192849726ccc.png
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
+  - planTitle: Savaitgalio narystė
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 9-12 Prognozių
+    planPrice: 34.99€
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
     isMostPopular: true
@@ -122,13 +129,6 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 60 - 70 Prognozių
     isMostPopular: false
-  - planTitle: Savaitgalio narystė
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 9-12 Prognozių
-    planPrice: 34.99€
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
