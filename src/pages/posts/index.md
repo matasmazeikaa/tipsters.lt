@@ -6,7 +6,7 @@ plans:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 35-40 Prognozių
+      - planDescription: 30-40 Prognozių
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
     isMostPopular: true
@@ -21,7 +21,7 @@ plans:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 60 - 70 Prognozių
+      - planDescription: 60-80 Prognozių
     isMostPopular: false
 statistika:
   - statistikosFoto: /assets/media/140138f3-0d91-4fbf-bd06-d070c453c2bb.png
