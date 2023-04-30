@@ -185,6 +185,7 @@ atsiliepimai:
   - atsiliepimaiFoto: /assets/media/68bfaa1f-3468-49a4-82e7-f940b6ca9845.jpeg
   - atsiliepimaiFoto: /assets/media/1b9fdb30-b213-4190-99b0-9703f9cf131d.jpeg
   - atsiliepimaiFoto: /assets/media/b64b69c4-733d-4432-aacc-6babaea66fbc.jpeg
+  - atsiliepimaiFoto: /assets/media/f5e64ce2-64b3-4f24-bcbd-e33166ab1dd2.jpeg
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga1Title: Pilnai išanalizuoti statymai
 ---
