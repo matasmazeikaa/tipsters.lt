@@ -22,7 +22,6 @@ winnings:
   - winningFoto: /assets/media/laimejimas20.jpeg
   - winningFoto: /assets/media/laimejimas22.jpeg
   - winningFoto: /assets/media/laimejimas23.jpeg
-  - winningFoto: /assets/media/laimejimas24.jpeg
   - winningFoto: /assets/media/laimejimas25.jpeg
   - winningFoto: /assets/media/laimejimas26.jpeg
   - winningFoto: /assets/media/laimejimas27.jpeg
