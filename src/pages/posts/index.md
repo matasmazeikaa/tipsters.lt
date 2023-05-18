@@ -1,20 +1,12 @@
 ---
 plans:
-  - planTitle: 2 Savaitės
-    planPrice: 69.99€
+  - planTitle: 1 Savaitė
+    planPrice: 44.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 35-40 Prognozių
-  - planTitle: 3 Mėnesiai
-    planPrice: 249.99€
-    isMostPopular: true
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 180 - 200 Prognozių
+      - planDescription: 18-20 Prognozių
   - planTitle: 1 Mėnesis
     planPrice: 119.99€
     planDescriptions:
@@ -22,7 +14,14 @@ plans:
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
       - planDescription: 60-80 Prognozių
-    isMostPopular: false
+    isMostPopular: true
+  - planTitle: 2 Savaitės
+    planPrice: 69.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 35-40 Prognozių
 statistika:
   - statistikosFoto: /assets/media/140138f3-0d91-4fbf-bd06-d070c453c2bb.png
   - statistikosFoto: /assets/media/76f26835-0509-4b9b-8764-3f0c9c89312f.png
