@@ -2,7 +2,10 @@
 plans:
   - planTitle: 10 High stake statymų
     planPrice: 49.99€
-    planDescriptions: []
+    planDescriptions:
+      - planDescription: Statymai prematch
+      - planDescription: Statymai didelės vertės
+      - planDescription: 10 Prognozių
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
     planDescriptions:
