@@ -1,7 +1,7 @@
 ---
 plans:
   - planTitle: Savaitės narystė
-    planPrice: 44.99€
+    planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
