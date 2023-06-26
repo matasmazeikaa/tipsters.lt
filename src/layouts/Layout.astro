@@ -1,7 +1,6 @@
 ---
 import "@splidejs/splide/css";
 import "/node_modules/sal.js/dist/sal.css";
-import Lightbox from '/node_modules/@julian_cataldo/astro-lightbox/Lightbox.astro';
 
 import "@splidejs/splide/css/core";
 import BaseHead from "../components/BaseHead.astro";
@@ -15,11 +14,14 @@ const currentYear = new Date().getFullYear();
   import sal from "sal.js";
   import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
+
   sal({
     threshold: 0.2,
     once: true,
     root: null,
   });
+
+
 
   const allScrollRef = document.getElementsByClassName("scrollRef");
 

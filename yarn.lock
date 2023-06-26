@@ -1065,11 +1065,6 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@julian_cataldo/astro-lightbox@^0.10.11":
-  version "0.10.11"
-  resolved "https://registry.yarnpkg.com/@julian_cataldo/astro-lightbox/-/astro-lightbox-0.10.11.tgz#a1bbf92e358b3882128a9ad2b996c4a4d07a1ce7"
-  integrity sha512-S/6A8BByJqjzaw90IsBDJOfvaz0TnnfkabeudAYlnYnQgSztpcjwvalqyi77vu9IgJ9GZBv3vpa2dDgloA2UAA==
-
 "@kwsites/file-exists@^1.1.1":
   version "1.1.1"
   resolved "https://registry.npmjs.org/@kwsites/file-exists/-/file-exists-1.1.1.tgz"

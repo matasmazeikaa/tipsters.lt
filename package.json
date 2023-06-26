@@ -18,7 +18,6 @@
     "@astrojs/image": "^0.16.0",
     "@astrojs/sitemap": "^1.2.1",
     "@astrojs/tailwind": "^3.0.1",
-    "@julian_cataldo/astro-lightbox": "^0.10.11",
     "@splidejs/splide": "^4.1.4",
     "astro-compress": "^1.1.35",
     "astro-imagetools": "^0.8.1",
