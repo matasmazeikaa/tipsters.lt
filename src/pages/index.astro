@@ -1,6 +1,7 @@
 ---
 import "@splidejs/splide/css";
 import "/node_modules/sal.js/dist/sal.css";
+import Lightbox from '@julian_cataldo/astro-lightbox/Lightbox.astro';
 
 // or only core styles
 import "@splidejs/splide/css/core";
@@ -80,6 +81,7 @@ const {
       },
     }).mount()
   );
+
 </script>
 
 <Layout>
@@ -293,7 +295,7 @@ const {
         <ul class="splide__list">
           {
             statistika.map((statistika, index) => (
-              <li class="flex justify-center items-center splide__slide">
+              <li class="flex justify-center items-center splide__slide" data-lightbox="true">
                 <Picture
                   src={statistika.statistikosFoto}
                   class="mx-auto"
