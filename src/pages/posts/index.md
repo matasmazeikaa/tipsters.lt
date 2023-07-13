@@ -1,14 +1,14 @@
 ---
 plans:
-  - planTitle: Savaitės narystė (tipsters+beisbolas)
-    planPrice: 49.99€
+  - planTitle: 2 Savaitės
+    planPrice: 59.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 18-20 Prognozių
+      - planDescription: 35-40 Prognozių
   - planTitle: 3 Mėnesiai
-    planPrice: 249.99€
+    planPrice: 199.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
@@ -16,7 +16,7 @@ plans:
       - planDescription: 180-200 Prognozių
     isMostPopular: true
   - planTitle: 1 Mėnesis
-    planPrice: 119.99€
+    planPrice: 99.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
