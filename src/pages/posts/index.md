@@ -31,14 +31,15 @@ statistika:
   - statistikosFoto: /assets/media/e1568b5b-4270-477e-9c55-192849726ccc.png
   - statistikosFoto: /assets/media/dd820ba3-f879-406b-aea9-9df45ca58172.jpeg
   - statistikosFoto: /assets/media/09273483-116f-4297-9176-a3459e11d4e2.jpeg
+  - statistikosFoto: /assets/media/94c994b1-37f6-4850-80fb-362b900d9311.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
-  - winningFoto: /assets/media/laimejimas1.jpeg
   - winningFoto: /assets/media/laimejimas2.jpeg
   - winningFoto: /assets/media/laimejimas3.jpeg
   - winningFoto: /assets/media/laimejimas4.jpeg
   - winningFoto: /assets/media/laimejimas5.jpeg
   - winningFoto: /assets/media/laimejimas6.jpeg
+  - winningFoto: /assets/media/laimejimas1.jpeg
   - winningFoto: /assets/media/laimejimas7.jpeg
   - winningFoto: /assets/media/laimejimas8.jpeg
   - winningFoto: /assets/media/laimejimas9.jpeg
