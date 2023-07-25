@@ -141,6 +141,9 @@ winnings:
   - winningFoto: /assets/media/63bde9b2-4831-42d1-9d43-b5b714624627.jpeg
   - winningFoto: /assets/media/776ef193-4132-49d5-9021-97b460d784cb.jpeg
   - winningFoto: /assets/media/49b690c2-d18d-41fe-95e2-fbc71b045909.jpeg
+  - winningFoto: /assets/media/895bb5c6-8363-452e-ab1a-e9625cfcdff8.jpeg
+  - winningFoto: /assets/media/9487c7d4-fa0f-4969-9501-3114927d55c7.jpeg
+  - winningFoto: /assets/media/291fed18-8140-4b57-9034-7b383d22ebf7.jpeg
 authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
