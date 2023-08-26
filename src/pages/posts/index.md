@@ -1,6 +1,6 @@
 ---
 plans:
-  - planTitle: World Cup krepšinio statymai
+  - planTitle: 2 Savaitės
     planPrice: 69.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
