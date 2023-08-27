@@ -1,6 +1,6 @@
 ---
 plans:
-  - planTitle: Savaitės narystė(tipsters+world cup)
+  - planTitle: Savaitės narystė (tipsters+WC)
     planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
