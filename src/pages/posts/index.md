@@ -1,12 +1,12 @@
 ---
 plans:
-  - planTitle: 2 Savaitės
-    planPrice: 69.99€
+  - planTitle: Savaitės narystė (tipsters+world cup)
+    planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 35-40 Prognozių
+      - planDescription: 20-25 Prognozės
     isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
