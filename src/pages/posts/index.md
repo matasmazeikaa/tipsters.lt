@@ -198,6 +198,14 @@ atsiliepimai:
   - atsiliepimaiFoto: /assets/media/1b9fdb30-b213-4190-99b0-9703f9cf131d.jpeg
   - atsiliepimaiFoto: /assets/media/b64b69c4-733d-4432-aacc-6babaea66fbc.jpeg
   - atsiliepimaiFoto: /assets/media/f5e64ce2-64b3-4f24-bcbd-e33166ab1dd2.jpeg
+  - atsiliepimaiFoto: /assets/media/2ad9229e-1c22-4225-a9aa-e8b89d447834.jpeg
+  - atsiliepimaiFoto: /assets/media/7d5c3f4a-35af-47e6-b61f-d40ea7e10dfb.jpeg
+  - atsiliepimaiFoto: /assets/media/e93b38fa-e08f-425c-b4be-2a1dae80dff4.jpeg
+  - atsiliepimaiFoto: /assets/media/d51f8a42-f306-43b2-81f0-7ad9c68675fd.jpeg
+  - atsiliepimaiFoto: /assets/media/46f25bc9-0746-4e66-ad84-a434f9456c24.jpeg
+  - atsiliepimaiFoto: /assets/media/5a481ce6-3572-49d6-a41a-0fc85184ada7.jpeg
+  - atsiliepimaiFoto: /assets/media/6b7a8de3-0e2e-4f02-89f1-3246b531522e.jpeg
+  - atsiliepimaiFoto: /assets/media/a9c1023b-0fbb-4b40-8ca6-9ce5b6cf0e37.jpeg
 paslauga2Title: Klaidingos lažybų bendrovių linijos
 paslauga1Title: Pilnai išanalizuoti statymai
 ---
