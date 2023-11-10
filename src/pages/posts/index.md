@@ -1,6 +1,6 @@
 ---
 plans:
-  - planTitle: Savaitgalio
+  - planTitle: Savaitgalio narystė
     planPrice: 34.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
