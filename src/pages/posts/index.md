@@ -1,12 +1,12 @@
 ---
 plans:
-  - planTitle: 1 Savaitė
-    planPrice: 44.99€
+  - planTitle: Savaitgalio narystė
+    planPrice: 34.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 18-20 Prognozių
+      - planDescription: 10-15 Prognozių
     isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
