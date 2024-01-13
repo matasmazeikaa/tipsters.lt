@@ -1,12 +1,12 @@
 ---
 plans:
-  - planTitle: Savaitgalio narystė
-    planPrice: 34.99€
+  - planTitle: Australian Open statymai
+    planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 9-12 Prognozių
+      - planDescription: 25-30 Prognozių
     isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
