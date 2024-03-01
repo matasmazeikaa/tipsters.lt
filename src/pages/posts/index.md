@@ -1,12 +1,12 @@
 ---
 plans:
-  - planTitle: "2 Savaitės "
-    planPrice: "69.99€ "
+  - planTitle: Savaitgalio narystė
+    planPrice: "34.99€ "
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 35-40 Prognozių
+      - planDescription: 9-12 Prognozių
     isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 249.99€
@@ -159,10 +159,7 @@ subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
 title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
 price1Month: 119.99€
-nuolaidos:
-  - discountTitle: pavasaris25
-    percent: "25"
-    isTurnedOn: true
+nuolaidos: []
 price3Months: 249.99€
 paslauga3Title: Pagalba klientams 24/7
 atsiliepimai:
