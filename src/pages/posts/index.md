@@ -25,18 +25,18 @@ plans:
       - planDescription: 60-80 Prognozių
     isMostPopular: false
 statistika:
-  - statistikosFoto: /assets/media/140138f3-0d91-4fbf-bd06-d070c453c2bb.png
-  - statistikosFoto: /assets/media/76f26835-0509-4b9b-8764-3f0c9c89312f.png
-  - statistikosFoto: /assets/media/statistika1.jpeg
-  - statistikosFoto: /assets/media/e1568b5b-4270-477e-9c55-192849726ccc.png
-  - statistikosFoto: /assets/media/dd820ba3-f879-406b-aea9-9df45ca58172.jpeg
-  - statistikosFoto: /assets/media/09273483-116f-4297-9176-a3459e11d4e2.jpeg
-  - statistikosFoto: /assets/media/94c994b1-37f6-4850-80fb-362b900d9311.jpeg
-  - statistikosFoto: /assets/media/d1c9d175-0902-4275-addb-eaeba4e77c9b.jpeg
-  - statistikosFoto: /assets/media/40bf374c-899c-4103-8377-0d786a49f597.jpeg
-  - statistikosFoto: /assets/media/image-2024-01-17-at-18.53.jpeg
-  - statistikosFoto: /assets/media/image-2024-01-24-at-19.00.jpeg
-  - statistikosFoto: /assets/media/image-2024-01-24-at-19.01.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.58.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.59.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.01.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.10.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.11.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.12.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.13.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.14.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.16.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.18.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.19.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas2.jpeg
