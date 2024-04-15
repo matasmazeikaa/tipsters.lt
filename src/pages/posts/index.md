@@ -22,7 +22,7 @@ plans:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 70-80 Prognozių
+      - planDescription: 80-90 Prognozių
     isMostPopular: false
 statistika:
   - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
