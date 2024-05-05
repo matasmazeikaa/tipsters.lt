@@ -10,7 +10,8 @@ export interface Props {
   target?: string;
 }
 
-const { text, classList, isEmpty, href, salDelay, id, target } = Astro.props;
+const { text, isEmpty, href, salDelay, id, target, class: className } = Astro.props;
+
 ---
 
 <style>
@@ -44,5 +45,5 @@ const { text, classList, isEmpty, href, salDelay, id, target } = Astro.props;
   href={href}
   data-sal-delay={salDelay}
   data-sal="slide-up"
-  class:list={[classList, "button", { "button-empty": isEmpty }]}>{text}</a
+  class:list={[className, "button", { "button-empty": isEmpty }]}>{text}</a
 >

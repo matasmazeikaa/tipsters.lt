@@ -7,8 +7,8 @@ import "@splidejs/splide/css/core";
 import Button from "../components/Button.astro";
 import PriceCard from "../components/PriceCard.astro";
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "@astrojs/image/components";
 import DiscountInput from "../components/DiscountInput.astro";
+import { Image, Picture } from "astro:assets";
 
 const siteData = await Astro.glob("./posts/index.md");
 
@@ -306,10 +306,11 @@ document.addEventListener('keydown', (e) => {
           {
             atsiliepimai.map((atsiliepimas, index) => (
               <li class="flex justify-center items-center splide__slide">
-                <Picture
+                <Image
                   src={atsiliepimas.atsiliepimaiFoto}
                   class="mx-auto"
-                  widths={[400, 800, 1200]}
+                  width="400"
+                  height="400"
                   sizes="(max-width: 800px) 100vw, 800px"
                   fit="contain"
                   aspectRatio="1:1"
@@ -342,10 +343,11 @@ document.addEventListener('keydown', (e) => {
           {
             statistika.map((statistika, index) => (
               <li class="galerry flex justify-center items-center splide__slide" data-lightbox="true">
-                  <Picture
+                  <Image
                     src={statistika.statistikosFoto}
                     class="mx-auto"
-                    widths={[400, 800, 1200]}
+                    width="800"
+                  height="800"
                     sizes="(max-width: 800px) 100vw, 800px"
                     fit="contain"
                     aspectRatio="1:1"
@@ -378,10 +380,11 @@ document.addEventListener('keydown', (e) => {
           {
             winnings.map((winning, index) => (
               <li class="flex justify-center items-center splide__slide">
-                <Picture
+                <Image
                   src={winning.winningFoto}
                   class="mx-auto"
-                  widths={[400, 800, 1200]}
+                  width="400"
+                  height="400"
                   sizes="(max-width: 800px) 100vw, 800px"
                   fit="contain"
                   aspectRatio="1:1"
