@@ -1,0 +1,18 @@
+# Configure Netlify builds.
+[build]
+  publish = "dist/"
+  command = "npm run buildgst
+  "
+
+# Request bots not to index the admin section.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+
+[[redirects]]
+  from = "/api/*" # simplify all calls to serverless functions
+  to = "/.netlify/functions/:splat" # all function calls will go to this path
+  status = 200 # ok code
+  force = true # ensure to always redirect

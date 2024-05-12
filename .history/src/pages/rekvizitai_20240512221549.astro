@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <section class="hero h-full relative">
+    <div
+      class="container h-screen mx-auto hero-content text-center z-10 flex flex-col justify-center items-center"
+    >
+      <h1
+        data-sal="slide-up"
+        data-sal-delay="100"
+        class="max-w-[86.4rem] mb-24 md:mb-32 text-h1 md:text-h1"
+      >
+        Rekvizitai
+      </h1>
+    </div>
+    <div class="hero-scroll">
+      <img
+        class="mouse-animation"
+        src="/assets/media/mouse.svg"
+        alt="mouse"
+        width="32"
+        height="32"
+        class="w-[3.2rem]"
+      />
+    </div>
+  </section>
+  <div class="md:py-96 py-56 container mx-auto class=" text-medium"">
+    <section id="content" class="page-content page-cms page-cms-10">
+      <p class>Įmonės pavadinimas: Consumo, MB</p>
+      <p class>Įmonės kodas: 306724230</p>
+      <p class>Buveinės adresas: J. Karoso g. 21A-10, LT-92136 Klaipėda</p>
+    </section>
+  </div>
+</Layout>
