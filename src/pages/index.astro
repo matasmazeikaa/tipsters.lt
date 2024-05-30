@@ -33,6 +33,7 @@ const {
 ---
 
 <script define:vars={{ nuolaidos }} type="module">
+
   const discountInput = document.querySelector("#discount-input");
 
   const applyDiscount = (discount) => {
@@ -255,7 +256,7 @@ document.addEventListener('keydown', (e) => {
       </h2>
 
       {
-        nuolaidos.length && (
+        !!nuolaidos.length && (
           <DiscountInput
             classList="input block mx-auto"
             id="discount-input"
