@@ -1,6 +1,6 @@
 ---
 plans:
-  - planTitle: Narystė iki vasaros galo
+  - planTitle: Narystė iki vasaros pabaigos
     planPrice: "79.99€ "
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
