@@ -39,10 +39,10 @@ statistika:
   - statistikosFoto: /assets/media/image-2024-03-19-at-17.19.jpeg
   - statistikosFoto: /assets/media/image-2024-06-07-at-17.43.jpeg
   - statistikosFoto: /assets/media/screenshot-2024-07-25-at-18.59.30.png
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.48.jpeg
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.47.jpeg
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.45.jpeg
   - statistikosFoto: /assets/media/image-2024-08-13-at-18.42.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.45.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.47.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.48.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas2.jpeg
