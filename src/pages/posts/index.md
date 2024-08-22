@@ -1,7 +1,7 @@
 ---
 plans:
   - planTitle: Combo
-    planPrice: "14.99"
+    planPrice: "15"
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
