@@ -43,6 +43,7 @@ statistika:
   - statistikosFoto: /assets/media/image-2024-08-13-at-18.45.jpeg
   - statistikosFoto: /assets/media/image-2024-08-13-at-18.47.jpeg
   - statistikosFoto: /assets/media/image-2024-08-13-at-18.48.jpeg
+  - statistikosFoto: /assets/media/image-2024-09-12-at-16.53.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas2.jpeg
