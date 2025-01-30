@@ -1,12 +1,12 @@
 ---
 plans:
-  - planTitle: Narystė iki mėn pabaigos
+  - planTitle: Savaitgalio statymai
     planPrice: "39.99€ "
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 15-20 Prognozių
+      - planDescription: 10-15 Prognozių
     isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 349.99€
