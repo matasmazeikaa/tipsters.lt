@@ -138,6 +138,9 @@ statistika:
   - statistikosFoto: /assets/media/image-2024-10-19-at-18.33.jpeg
   - statistikosFoto: /assets/media/image-28-11-2024-at-12.44.jpeg
   - statistikosFoto: /assets/media/image-02-01-2025-at-13.08.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.05.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.06.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: 2 Savaitės
