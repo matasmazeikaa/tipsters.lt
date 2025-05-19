@@ -1,4 +1,55 @@
 ---
+plans:
+  - planTitle: 2 Savaitės
+    planPrice: 89.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 45-50 Prognozių
+    isMostPopular: false
+  - planTitle: 3 Mėnesiai
+    planPrice: 349.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 220-250 Prognozių
+    isMostPopular: true
+  - planTitle: 1 Mėnesis
+    planPrice: 149.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 90-100 Prognozių
+    isMostPopular: false
+statistika:
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.58.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.59.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.01.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.10.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.11.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.12.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.13.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.14.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.16.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.18.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-17.19.jpeg
+  - statistikosFoto: /assets/media/image-2024-06-07-at-17.43.jpeg
+  - statistikosFoto: /assets/media/screenshot-2024-07-25-at-18.59.30.png
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.42.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.45.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.47.jpeg
+  - statistikosFoto: /assets/media/image-2024-08-13-at-18.48.jpeg
+  - statistikosFoto: /assets/media/image-2024-09-12-at-16.53.jpeg
+  - statistikosFoto: /assets/media/image-2024-10-19-at-18.33.jpeg
+  - statistikosFoto: /assets/media/image-28-11-2024-at-12.44.jpeg
+  - statistikosFoto: /assets/media/image-02-01-2025-at-13.08.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.05.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.06.jpeg
+  - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
 winnings:
   - winningFoto: /assets/media/laimejimas0.jpeg
   - winningFoto: /assets/media/laimejimas2.jpeg
@@ -115,58 +166,7 @@ authorURL: https://twitter.com/swithinbank
 paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
   kuriais mes ir pasinaudojam :)
-statistika:
-  - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-16.58.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-16.59.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.01.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.10.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.11.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.12.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.13.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.14.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.16.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.18.jpeg
-  - statistikosFoto: /assets/media/image-2024-03-19-at-17.19.jpeg
-  - statistikosFoto: /assets/media/image-2024-06-07-at-17.43.jpeg
-  - statistikosFoto: /assets/media/screenshot-2024-07-25-at-18.59.30.png
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.42.jpeg
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.45.jpeg
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.47.jpeg
-  - statistikosFoto: /assets/media/image-2024-08-13-at-18.48.jpeg
-  - statistikosFoto: /assets/media/image-2024-09-12-at-16.53.jpeg
-  - statistikosFoto: /assets/media/image-2024-10-19-at-18.33.jpeg
-  - statistikosFoto: /assets/media/image-28-11-2024-at-12.44.jpeg
-  - statistikosFoto: /assets/media/image-02-01-2025-at-13.08.jpeg
-  - statistikosFoto: /assets/media/image-11-04-2025-at-13.05.jpeg
-  - statistikosFoto: /assets/media/image-11-04-2025-at-13.06.jpeg
-  - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
-plans:
-  - planTitle: Savaitgalio narystė
-    planPrice: 39.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 12-16 Prognozių
-    isMostPopular: false
-  - planTitle: 3 Mėnesiai
-    planPrice: 349.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 220-250 Prognozių
-    isMostPopular: true
-  - planTitle: 1 Mėnesis
-    planPrice: 149.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 90-100 Prognozių
-    isMostPopular: false
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
