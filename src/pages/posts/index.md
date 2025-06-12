@@ -32,13 +32,13 @@ statistika:
   - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: 2 Savaitės (+1 dovanų)
-    planPrice: 69.99€
+  - planTitle: Savaitgalio narystė
+    planPrice: 39.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 70-80 Prognozių
+      - planDescription: 12-16 Prognozių
     isMostPopular: false
   - planTitle: 1 Mėnesis
     planPrice: 149.99€
