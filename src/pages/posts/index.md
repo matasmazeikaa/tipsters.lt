@@ -32,7 +32,7 @@ statistika:
   - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: 2 Savaitės
+  - planTitle: Savaitgalio narystė
     planPrice: 89.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
