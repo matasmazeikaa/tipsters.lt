@@ -49,7 +49,7 @@ plans:
       - planDescription: 90-100 Prognozių
     isMostPopular: true
   - planTitle: 3 Mėnesiai
-    planPrice: 249.99€
+    planPrice: 299.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
