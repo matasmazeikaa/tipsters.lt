@@ -33,7 +33,7 @@ statistika:
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: 1 Savaitė
-    planPrice: 59.99€
+    planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
