@@ -34,7 +34,7 @@ statistika:
   - statistikosFoto: /assets/media/image-25-07-2025-at-14.11-1-.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: 1 Savaitė
+  - planTitle: Narystė iki mėnesio pabaigos
     planPrice: 49.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
