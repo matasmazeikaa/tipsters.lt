@@ -49,7 +49,7 @@ plans:
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
       - planDescription: 90-100 Prognozių
-    isMostPopular: true
+    isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 150€
     planDescriptions:
