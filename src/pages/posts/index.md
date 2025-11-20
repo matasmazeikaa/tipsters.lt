@@ -32,6 +32,9 @@ statistika:
   - statistikosFoto: /assets/media/image-11-04-2025-at-13.08.jpeg
   - statistikosFoto: /assets/media/image-25-07-2025-at-14.11.jpeg
   - statistikosFoto: /assets/media/image-25-07-2025-at-14.11-1-.jpeg
+  - statistikosFoto: /assets/media/image-20-11-2025-at-15.56.jpeg
+  - statistikosFoto: /assets/media/image-20-11-2025-at-16.00.jpeg
+  - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: Savaitgalio narystė
