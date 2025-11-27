@@ -52,14 +52,21 @@ plans:
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
       - planDescription: 100-120 Prognozių
-    isMostPopular: true
+    isMostPopular: false
   - planTitle: 3 Mėnesiai
     planPrice: 299.99€
     planDescriptions:
       - planDescription: Pilau išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 250-300 prognozių
+      - planDescription: 300-320 prognozių
+  - planTitle: 1 Metai
+    planPrice: 699.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 1200-1400 prognozių
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
