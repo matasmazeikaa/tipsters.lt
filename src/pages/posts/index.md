@@ -38,7 +38,7 @@ statistika:
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: 2 Savaitės
-    planPrice: 75.00€
+    planPrice: 89.00€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
@@ -46,7 +46,7 @@ plans:
       - planDescription: 45-55 Prognozės
     isMostPopular: false
   - planTitle: 1 Mėnesis
-    planPrice: 120.00€
+    planPrice: 149.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
@@ -54,7 +54,7 @@ plans:
       - planDescription: 100-120 Prognozių
     isMostPopular: true
   - planTitle: 3 Mėnesiai
-    planPrice: 250.00€
+    planPrice: 349.99€
     planDescriptions:
       - planDescription: Pilau išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
