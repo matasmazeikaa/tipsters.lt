@@ -37,7 +37,7 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: Narystė iki mėn pabaigos
+  - planTitle: Narystė iki kovo pabaigos
     planPrice: 75.00€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
