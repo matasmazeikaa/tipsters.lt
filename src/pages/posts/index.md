@@ -38,7 +38,7 @@ statistika:
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: Narystė iki mėnesio galo
-    planPrice: 79.99€
+    planPrice: 69.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
