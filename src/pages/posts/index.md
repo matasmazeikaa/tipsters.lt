@@ -53,8 +53,8 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 100-120 Prognozių
     isMostPopular: true
-  - planTitle: 3 Mėnesiai (vasaros deal)
-    planPrice: 249.99€
+  - planTitle: "3 Mėnesiai "
+    planPrice: 349.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
