@@ -38,12 +38,12 @@ statistika:
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
   - planTitle: Savaitgalio narystė
-    planPrice: 29.99€
+    planPrice: 24.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 10-15 Prognozių
+      - planDescription: 9-12 Prognozių
     isMostPopular: false
   - planTitle: "1 Mėnesis "
     planPrice: 149.99€
