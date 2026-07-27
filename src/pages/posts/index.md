@@ -45,13 +45,13 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 45-55 Prognozės
     isMostPopular: false
-  - planTitle: "1 Mėnesis "
-    planPrice: 149.99€
+  - planTitle: Narystė iki vasaros pabaigos (su nuolaida)
+    planPrice: 99.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 90-110 Prognozių
+      - planDescription: 100-120 Prognozių
     isMostPopular: true
   - planTitle: "3 Mėnesiai "
     planPrice: 349.99€
