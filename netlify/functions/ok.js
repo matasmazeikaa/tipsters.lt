@@ -4,7 +4,7 @@ const headers = {
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
 };
 
-exports.handler = function () {
+export const handler = function () {
   return {
     statusCode: 200,
     body: "OK",

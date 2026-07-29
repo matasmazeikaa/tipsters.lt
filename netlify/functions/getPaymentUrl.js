@@ -1,4 +1,4 @@
-const Paysera = require("paysera-nodejs");
+import Paysera from "paysera-nodejs";
 
 const headers = {
   "Access-Control-Allow-Origin": "*",
@@ -10,29 +10,45 @@ function guidGenerator() {
   return 100000 + Math.floor(Math.random() * 900000);
 }
 
-exports.handler = async function (event, context) {
-  const request = JSON.parse(event.body);
+export const handler = async function (event) {
+  try {
+    const request = JSON.parse(event.body);
 
-  const paysera = new Paysera({
-    projectid: process.env.PAYSERA_PROJECT_ID,
-    sign_password: process.env.PAYSERA_PASSWORD,
-    accepturl: "https://tipsters.lt/mokejimas-pavyko",
-    cancelurl: "https://tipsters.lt/mokejimas-nepavyko",
-    callbackurl: "https://tipsters.lt/.netlify/functions/ok",
-    test: 0,
-  });
+    if (!process.env.PAYSERA_PROJECT_ID || !process.env.PAYSERA_PASSWORD) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ error: "Paysera credentials are not configured" }),
+        headers,
+      };
+    }
 
-  const redirectUrl = paysera.buildRequestUrl({
-    orderid: guidGenerator(),
-    amount: Number(request.amount),
-    currency: "EUR",
-  });
+    const paysera = new Paysera({
+      projectid: process.env.PAYSERA_PROJECT_ID,
+      sign_password: process.env.PAYSERA_PASSWORD,
+      accepturl: "https://tipsters.lt/mokejimas-pavyko",
+      cancelurl: "https://tipsters.lt/mokejimas-nepavyko",
+      callbackurl: "https://tipsters.lt/.netlify/functions/ok",
+      test: 0,
+    });
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      redirectUrl,
-    }),
-    headers,
-  };
+    const redirectUrl = paysera.buildRequestUrl({
+      orderid: guidGenerator(),
+      amount: Number(request.amount),
+      currency: "EUR",
+    });
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        redirectUrl,
+      }),
+      headers,
+    };
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message }),
+      headers,
+    };
+  }
 };
