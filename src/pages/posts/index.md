@@ -37,13 +37,6 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: 1 Savaitė
-    planPrice: 59.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 25-30 Prognozių
   - planTitle: 2 Savaitės
     planPrice: 89.99€
     planDescriptions:
@@ -59,7 +52,7 @@ plans:
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
       - planDescription: 100-120 Prognozių
-    isMostPopular: false
+    isMostPopular: true
   - planTitle: "3 Mėnesiai "
     planPrice: 349.99€
     planDescriptions:
@@ -68,22 +61,12 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 320-340 prognozių
     isMostPopular: false
-  - planTitle: 6 Mėnesiai
-    planPrice: 499.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 650-700 Prognozių
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
 title: Prisijunk prie didžiausios lažybų ekspertų grupės Lietuvoje!
 price1Month: 119.99€
-nuolaidos:
-  - discountTitle: tipsters40
-    percent: "40"
-    isTurnedOn: true
+nuolaidos: []
 price3Months: 249.99€
 paslauga3Title: Pagalba klientams 24/7
 atsiliepimai:
