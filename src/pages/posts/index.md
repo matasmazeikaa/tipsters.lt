@@ -5,8 +5,8 @@ paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argum
 paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
   kuriais mes ir pasinaudojam :)
 statistika:
-  - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
   - statistikosFoto: /assets/media/image-2024-03-19-at-16.58.jpeg
+  - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
   - statistikosFoto: /assets/media/image-2024-03-19-at-16.59.jpeg
   - statistikosFoto: /assets/media/image-2024-03-19-at-17.01.jpeg
   - statistikosFoto: /assets/media/image-2024-03-19-at-17.10.jpeg
@@ -37,13 +37,13 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: Savaitgalio narystė
-    planPrice: 24.99€
+  - planTitle: 2 Savaitės
+    planPrice: 89.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 9-11 Prognozių
+      - planDescription: 45-55 Prognozės
     isMostPopular: false
   - planTitle: 1 Mėnesis
     planPrice: 149.99€
