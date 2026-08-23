@@ -45,8 +45,8 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 45-55 Prognozės
     isMostPopular: false
-  - planTitle: 1 Mėnesis
-    planPrice: 149.99€
+  - planTitle: "Super deal: 2 savaitės + 2 savaitės free"
+    planPrice: 89.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
