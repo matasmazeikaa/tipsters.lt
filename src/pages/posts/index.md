@@ -37,14 +37,6 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: 2 Savaitės
-    planPrice: 89.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 45-55 Prognozės
-    isMostPopular: false
   - planTitle: "Super deal: 2 savaitės + 2 savaitės free"
     planPrice: 89.99€
     planDescriptions:
@@ -53,6 +45,14 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 100-120 Prognozių
     isMostPopular: true
+  - planTitle: 1 Mėnesis
+    planPrice: 149.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 100-120 Prognozių
+    isMostPopular: false
   - planTitle: "3 Mėnesiai "
     planPrice: 349.99€
     planDescriptions:
