@@ -37,21 +37,13 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
 plans:
-  - planTitle: Narystė iki mėnesio pabaigos
-    planPrice: 69.99€
+  - planTitle: 2 Savaitės
+    planPrice: 89.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
       - planDescription: Pagalba klientams 24/7
-      - planDescription: 50-60 Prognozių
-    isMostPopular: false
-  - planTitle: "3 Mėnesiai "
-    planPrice: 349.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 320-340 prognozių
+      - planDescription: 45-55 Prognozės
     isMostPopular: false
   - planTitle: 1 Mėnesis
     planPrice: 149.99€
@@ -61,6 +53,14 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 100-120 Prognozių
     isMostPopular: true
+  - planTitle: "3 Mėnesiai "
+    planPrice: 349.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 320-340 prognozių
+    isMostPopular: false
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
