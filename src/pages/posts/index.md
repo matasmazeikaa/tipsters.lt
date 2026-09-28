@@ -1,29 +1,9 @@
 ---
-plans:
-  - planTitle: Savaitgalio narystė
-    planPrice: 34.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 12-16 Prognozių
-    isMostPopular: false
-  - planTitle: 1 Mėnesis
-    planPrice: 149.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 100-120 Prognozių
-    isMostPopular: true
-  - planTitle: "3 Mėnesiai "
-    planPrice: 349.99€
-    planDescriptions:
-      - planDescription: Pilnai išanalizuoti statymai
-      - planDescription: Klaidingos lažybų bendrovių linijos
-      - planDescription: Pagalba klientams 24/7
-      - planDescription: 320-340 prognozių
-    isMostPopular: false
+winnings: []
+authorURL: https://twitter.com/swithinbank
+paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
+paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
+  kuriais mes ir pasinaudojam :)
 statistika:
   - statistikosFoto: /assets/media/image-2024-03-19-at-16.58.jpeg
   - statistikosFoto: /assets/media/image-2024-03-19-at-16.55.jpeg
@@ -55,12 +35,32 @@ statistika:
   - statistikosFoto: /assets/media/image-20-11-2025-at-15.56.jpeg
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.00.jpeg
   - statistikosFoto: /assets/media/image-20-11-2025-at-16.03.jpeg
-winnings: []
-authorURL: https://twitter.com/swithinbank
-paslauga1Info: Visi mūsų komandos duodami statymai yra išanalizuoti ir argumentuoti
-paslauga2Info: Lažybų bendrovės neretai įvelia į pasiūlą klaidingų koeficientų,
-  kuriais mes ir pasinaudojam :)
 paslauga3Info: Atsakysime į visus jums iškilusius klausimus
+plans:
+  - planTitle: 2 Savaitės
+    planPrice: 89.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 45-55 Prognozės
+    isMostPopular: false
+  - planTitle: 1 Mėnesis
+    planPrice: 149.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 100-120 Prognozių
+    isMostPopular: true
+  - planTitle: "3 Mėnesiai "
+    planPrice: 349.99€
+    planDescriptions:
+      - planDescription: Pilnai išanalizuoti statymai
+      - planDescription: Klaidingos lažybų bendrovių linijos
+      - planDescription: Pagalba klientams 24/7
+      - planDescription: 320-340 prognozių
+    isMostPopular: false
 price2Weeks: 69.99€
 subtitle: Naujienas, naujausius pasiūlymus, įvairias akcijas ir visą kitą
   pagrindinę informacija rasite mūsų Telegram kanale.
