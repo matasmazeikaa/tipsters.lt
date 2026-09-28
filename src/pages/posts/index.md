@@ -46,7 +46,7 @@ plans:
       - planDescription: 45-55 Prognozės
     isMostPopular: false
   - planTitle: Narystė iki spalio pabaigos (su nuolaida)
-    planPrice: 149.99€
+    planPrice: 99.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
       - planDescription: Klaidingos lažybų bendrovių linijos
