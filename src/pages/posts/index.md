@@ -45,7 +45,7 @@ plans:
       - planDescription: Pagalba klientams 24/7
       - planDescription: 45-55 Prognozės
     isMostPopular: false
-  - planTitle: 1 Mėnesis
+  - planTitle: Narystė iki spalio pabaigos (su nuolaida)
     planPrice: 149.99€
     planDescriptions:
       - planDescription: Pilnai išanalizuoti statymai
